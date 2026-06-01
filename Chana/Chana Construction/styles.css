@@ -175,7 +175,7 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 400; letter-spacing: -0.02e
 /* ============================================================
    HERO
    ============================================================ */
-.hero { position: relative; padding-top: 132px; padding-bottom: clamp(56px, 9vw, 120px); overflow: hidden; }
+.hero { position: relative; padding-top: 80px; padding-bottom: clamp(56px, 9vw, 120px); overflow: hidden; }
 .hero-top {
   display: grid; grid-template-columns: 1.05fr 0.95fr;
   gap: 40px; align-items: end;
