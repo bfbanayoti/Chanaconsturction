@@ -323,23 +323,23 @@ body.loaded .render-line { animation: lineSweep 2.7s cubic-bezier(0.65,0,0.35,1)
    CTA BAND
    ============================================================ */
 .cta-band {
-  background: var(--paper-2);
+  background: linear-gradient(135deg, oklch(0.93 0.014 78) 0%, oklch(0.91 0.018 72) 100%);
   color: var(--ink);
   border-top: 1px solid var(--line);
   padding-block: clamp(48px, 6vw, 88px);
 }
 .cta-glass {
-  background: oklch(0.99 0.004 80 / 0.72);
-  backdrop-filter: blur(28px) saturate(1.6) brightness(1.04);
-  -webkit-backdrop-filter: blur(28px) saturate(1.6) brightness(1.04);
-  border: 1px solid oklch(1 0 0 / 0.65);
-  border-bottom-color: oklch(0.88 0.008 80 / 0.5);
+  background: oklch(0.99 0.003 80 / 0.38);
+  backdrop-filter: blur(32px) saturate(1.8) brightness(1.06);
+  -webkit-backdrop-filter: blur(32px) saturate(1.8) brightness(1.06);
+  border: 1px solid oklch(1 0 0 / 0.55);
+  border-bottom-color: oklch(0.82 0.010 75 / 0.3);
   border-radius: 20px;
   box-shadow:
-    0 2px 0 0 oklch(1 0 0 / 0.9) inset,
-    0 -1px 0 0 oklch(0.85 0.01 75 / 0.35) inset,
-    0 12px 40px -8px oklch(0.7 0.02 70 / 0.12),
-    0 2px 8px -2px oklch(0.6 0.02 70 / 0.08);
+    0 2px 0 0 oklch(1 0 0 / 0.8) inset,
+    0 -1px 0 0 oklch(0.78 0.012 72 / 0.25) inset,
+    0 16px 48px -12px oklch(0.65 0.025 68 / 0.14),
+    0 2px 8px -2px oklch(0.6 0.02 70 / 0.06);
   padding: clamp(36px, 4vw, 60px) clamp(32px, 4vw, 56px);
 }
 .cta-inner { display: grid; grid-template-columns: 1.25fr 1fr; gap: clamp(32px, 6vw, 80px); align-items: end; }
