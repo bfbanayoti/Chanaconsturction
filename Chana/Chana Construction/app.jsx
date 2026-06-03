@@ -72,6 +72,10 @@ function PageContent() {
       <Marquee />
       <About />
       <Stats />
+      <Services />
+      <Projects />
+      <Process />
+      <Testimonials />
       <CtaBand />
     </React.Fragment>
   );
