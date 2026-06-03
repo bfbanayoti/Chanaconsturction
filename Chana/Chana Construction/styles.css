@@ -329,7 +329,7 @@ body.loaded .render-line { animation: lineSweep 2.7s cubic-bezier(0.65,0,0.35,1)
   padding-block: clamp(48px, 6vw, 88px);
 }
 .cta-glass {
-  background: oklch(0.99 0.003 80 / 0.38);
+  background: oklch(0.99 0.003 80 / 0.14);
   backdrop-filter: blur(32px) saturate(1.8) brightness(1.06);
   -webkit-backdrop-filter: blur(32px) saturate(1.8) brightness(1.06);
   border: 1px solid oklch(1 0 0 / 0.55);
