@@ -757,8 +757,13 @@ body.loaded .render-line { animation: lineSweep 2.7s cubic-bezier(0.65,0,0.35,1)
 .svc-card-num { font-family: var(--mono); font-size: 11px; letter-spacing: .14em; color: var(--accent); }
 .svc-card-name { font-family: var(--serif); font-size: clamp(18px, 1.8vw, 24px); font-weight: 400; color: var(--ink); line-height: 1.1; }
 .svc-card-desc { font-size: 14px; line-height: 1.65; color: var(--ink-soft); flex: 1; }
-@media (max-width: 900px) { .svc-cards-grid { grid-template-columns: repeat(2, 1fr); } }
-@media (max-width: 560px) { .svc-cards-grid { grid-template-columns: 1fr; } }
+/* Last card spans full width — horizontal layout */
+.svc-card:last-child { grid-column: 1 / -1; flex-direction: row; }
+.svc-card:last-child .svc-card-anim { width: 340px; height: auto; flex: none; min-height: 180px; }
+.svc-card:last-child .svc-card-body { padding: clamp(28px, 3vw, 48px); justify-content: center; }
+.svc-card:last-child .svc-card-name { font-size: clamp(22px, 2.5vw, 34px); }
+@media (max-width: 900px) { .svc-cards-grid { grid-template-columns: repeat(2, 1fr); } .svc-card:last-child { grid-column: 1 / -1; flex-direction: row; } .svc-card:last-child .svc-card-anim { width: 220px; } }
+@media (max-width: 560px) { .svc-cards-grid { grid-template-columns: 1fr; } .svc-card:last-child { flex-direction: column; } .svc-card:last-child .svc-card-anim { width: 100%; height: 180px; } }
 
 /* ============================================================
    WHY CHANA (Services page) — DARK
