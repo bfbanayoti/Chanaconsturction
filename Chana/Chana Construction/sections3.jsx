@@ -20,7 +20,11 @@ function Projects() {
         {PROJECTS.map((p, i) => (
           <article className={`proj ${p.cls} reveal ${i ? "d" + i : ""}`} key={p.t}>
             <span className="tag">{p.tag}</span>
-            <Ph label={p.label} />
+            <div className="proj-img">
+              {p.img
+                ? <img src={p.img} alt={p.label} loading="lazy" />
+                : <Ph label={p.label} />}
+            </div>
             <div className="meta">
               <div>
                 <div className="t">{p.t}</div>
