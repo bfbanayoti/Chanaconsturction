@@ -546,15 +546,26 @@ body.loaded .render-line { animation: lineSweep 2.7s cubic-bezier(0.65,0,0.35,1)
 @media (max-width: 900px) { .svc-layout { grid-template-columns: 1fr; } .svc-preview { display: none; } }
 
 /* Stats → DARK */
-#stats { background: var(--paper); color: var(--ink); border-block: 1px solid var(--line); }
-#stats .eyebrow { color: var(--accent-deep); }
+/* Stats — dark by default (home page) */
+#stats { background: var(--ink); color: var(--paper); }
+#stats .eyebrow { color: color-mix(in oklch, var(--accent) 60%, white); }
 #stats .eyebrow::before { background: var(--accent); }
-#stats .sec-head h2 { color: var(--ink); }
-#stats .sec-head .lead { color: var(--ink-soft); }
-#stats .stat { background: var(--paper-2); border-color: var(--line); }
-#stats .stat .v { color: var(--ink); }
-#stats .stat .k { color: var(--ink-soft); }
-#stats .stats { background: var(--paper-2); border-color: var(--line); }
+#stats .sec-head h2 { color: var(--paper); }
+#stats .sec-head .lead { color: oklch(0.78 0.01 80); }
+#stats .stat { background: oklch(1 0 0 / 0.04); }
+#stats .stat .v { color: var(--paper); }
+#stats .stat .k { color: oklch(0.72 0.01 80); }
+#stats .stats { background: oklch(1 0 0 / 0.08); border-color: oklch(1 0 0 / 0.1); }
+/* Stats — light on About page */
+.page-about #stats { background: var(--paper); color: var(--ink); border-block: 1px solid var(--line); }
+.page-about #stats .eyebrow { color: var(--accent-deep); }
+.page-about #stats .eyebrow::before { background: var(--accent); }
+.page-about #stats .sec-head h2 { color: var(--ink); }
+.page-about #stats .sec-head .lead { color: var(--ink-soft); }
+.page-about #stats .stat { background: var(--paper-2); border-color: var(--line); }
+.page-about #stats .stat .v { color: var(--ink); }
+.page-about #stats .stat .k { color: var(--ink-soft); }
+.page-about #stats .stats { background: var(--paper-2); border-color: var(--line); }
 
 /* ============================================================
    STATS
