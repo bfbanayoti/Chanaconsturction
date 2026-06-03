@@ -25,6 +25,15 @@ function Projects() {
                 ? <img src={p.img} alt={p.label} loading="lazy" />
                 : <Ph label={p.label} />}
             </div>
+            {p.budget && (
+              <div className="proj-specs">
+                <span>{p.budget}</span>
+                <span className="sep">·</span>
+                <span>{p.duration}</span>
+                <span className="sep">·</span>
+                <span>{p.year}</span>
+              </div>
+            )}
             <div className="meta">
               <div>
                 <div className="t">{p.t}</div>
@@ -216,4 +225,52 @@ function Footer() {
   );
 }
 
-Object.assign(window, { Projects, Process, Testimonials, Contact, Footer });
+function ProjectBreakdown() {
+  const [active, setActive] = uS3(0);
+  const p = PROJECTS[active];
+  return (
+    <section className="section proj-breakdown-bg" id="proj-breakdown">
+      <div className="wrap">
+        <div className="sec-head">
+          <div>
+            <div className="eyebrow reveal">Project detail</div>
+            <h2 className="reveal d1">Behind every build.</h2>
+          </div>
+          <p className="lead reveal d2">Select a project to see the brief, scope and outcome.</p>
+        </div>
+        <div className="pb-layout reveal d1">
+          <div className="pb-tabs">
+            {PROJECTS.map((proj, i) => (
+              <button key={proj.t} className={`pb-tab ${active === i ? "active" : ""}`} onClick={() => setActive(i)}>
+                <span className="pb-tag">{proj.tag}</span>
+                <span className="pb-name">{proj.t}</span>
+              </button>
+            ))}
+          </div>
+          <div className="pb-detail">
+            <div className="pb-img">
+              <img src={p.img} alt={p.t} loading="lazy" />
+            </div>
+            <div className="pb-info">
+              <div className="pb-stats">
+                <div className="pb-stat"><span className="k">Budget</span><span className="v">{p.budget}</span></div>
+                <div className="pb-stat"><span className="k">Duration</span><span className="v">{p.duration}</span></div>
+                <div className="pb-stat"><span className="k">Completed</span><span className="v">{p.year}</span></div>
+                <div className="pb-stat"><span className="k">Type</span><span className="v">{p.tag}</span></div>
+              </div>
+              <p className="pb-brief">{p.brief}</p>
+              <div className="pb-scope">
+                <span className="pb-scope-label">Scope of works</span>
+                <ul>
+                  {p.scope.map(s => <li key={s}><span className="trade-dot" />{s}</li>)}
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+Object.assign(window, { Projects, Process, Testimonials, Contact, Footer, ProjectBreakdown });

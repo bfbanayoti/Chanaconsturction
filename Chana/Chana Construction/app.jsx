@@ -31,7 +31,9 @@ function PageContent() {
       <React.Fragment>
         <PageHero {...PAGE_META.about} />
         <About />
+        <FounderStory />
         <Stats />
+        <Values />
         <Process />
         <Testimonials />
         <CtaBand />
@@ -43,6 +45,7 @@ function PageContent() {
       <React.Fragment>
         <PageHero {...PAGE_META.services} />
         <Services />
+        <TradesList />
         <Marquee />
         <CtaBand />
       </React.Fragment>
@@ -53,6 +56,7 @@ function PageContent() {
       <React.Fragment>
         <PageHero {...PAGE_META.projects} />
         <Projects />
+        <ProjectBreakdown />
         <Marquee />
         <CtaBand />
       </React.Fragment>

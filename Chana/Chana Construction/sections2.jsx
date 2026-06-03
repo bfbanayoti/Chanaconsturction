@@ -468,4 +468,93 @@ function Stats() {
   );
 }
 
-Object.assign(window, { About, Services, Stats });
+function FounderStory() {
+  return (
+    <section className="section founder-bg" id="founder">
+      <div className="wrap founder-grid">
+        <div className="founder-img reveal">
+          <img src="assets/hampstead-house.jpg" alt="Chana family" style={{ width:"100%", height:"100%", objectFit:"cover", borderRadius:"6px" }} />
+        </div>
+        <div className="founder-copy">
+          <div className="eyebrow reveal" style={{ marginBottom:"28px" }}>Our story</div>
+          <h2 className="reveal d1">Built on a family<br />tradition of craft.</h2>
+          <p className="reveal d2">
+            The Chana family has been surrounded by construction and craftsmanship for generations.
+            What began as a frustration — watching friends and family be let down by contractors who
+            overpromised and underdelivered — became a mission.
+          </p>
+          <p className="reveal d2">
+            We founded Chana Construction on a simple idea: that building someone's home is one of
+            the most significant things you can do for them, and it deserves to be treated that way.
+            Every project we take on, we treat as if it were our own.
+          </p>
+          <div className="sig reveal d3">
+            The Chana family
+            <small>Founders &amp; directors</small>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function Values() {
+  return (
+    <section className="section" id="values">
+      <div className="wrap">
+        <div className="sec-head">
+          <div>
+            <div className="eyebrow reveal">What drives us</div>
+            <h2 className="reveal d1">Six principles.<br />No exceptions.</h2>
+          </div>
+          <p className="lead reveal d2">
+            These are not aspirations — they are the standards we hold ourselves to on every project,
+            every day.
+          </p>
+        </div>
+        <div className="values-grid">
+          {VALUES.map((v, i) => (
+            <div className={`value-card reveal ${i ? "d"+(i%3) : ""}`} key={v.h}>
+              <span className="v-icon">{v.icon}</span>
+              <h3 className="v-h">{v.h}</h3>
+              <p className="v-p">{v.p}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function TradesList() {
+  return (
+    <section className="section trades-bg" id="trades">
+      <div className="wrap">
+        <div className="sec-head">
+          <div>
+            <div className="eyebrow reveal">Full scope</div>
+            <h2 className="reveal d1">Everything under<br />one roof.</h2>
+          </div>
+          <p className="lead reveal d2">
+            We manage every trade in-house or through our vetted network — so you have one point
+            of contact and zero coordination headaches.
+          </p>
+        </div>
+        <div className="trades-grid">
+          {TRADES.map((t, i) => (
+            <div className={`trade-col reveal ${i ? "d"+(i%3) : ""}`} key={t.cat}>
+              <h4 className="trade-cat">{t.cat}</h4>
+              <ul className="trade-list">
+                {t.items.map(item => (
+                  <li key={item}><span className="trade-dot" />{ item}</li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+Object.assign(window, { About, Services, Stats, FounderStory, Values, TradesList });

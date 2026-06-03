@@ -61,13 +61,25 @@ const STATS = [
 
 const PROJECTS = [
   { t: "Hampstead House", s: "New build · 5 bed · NW3", tag: "New Build", cls: "tall", label: "HAMPSTEAD HOUSE",
-    img: "assets/hampstead-house.jpg" },
+    img: "assets/hampstead-house.jpg",
+    budget: "£1.85m", duration: "14 months", year: "2024",
+    brief: "A full new-build family home on a cleared plot in NW3 — five bedrooms, cinema room, landscaped garden and full smart-home integration.",
+    scope: ["New build construction", "Architectural & planning", "Interior design", "Smart home & AV", "Landscaping"] },
   { t: "Islington Townhouse", s: "Refurbishment · Period home · N1", tag: "Refurbishment", cls: "wide", label: "ISLINGTON TOWNHOUSE",
-    img: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=900&q=85&auto=format&fit=crop" },
+    img: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=900&q=85&auto=format&fit=crop",
+    budget: "£420k", duration: "7 months", year: "2023",
+    brief: "Full gut refurbishment of a four-storey Victorian townhouse — structural alterations, new kitchen extension, and a complete interior overhaul.",
+    scope: ["Structural alterations", "Kitchen extension", "Full fit-out", "Plumbing & electrical", "Bespoke joinery"] },
   { t: "Kensington Apartment", s: "Interior fit-out · 3 bed · W8", tag: "Interior", cls: "sqr", label: "KENSINGTON APARTMENT",
-    img: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=900&q=85&auto=format&fit=crop" },
+    img: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=900&q=85&auto=format&fit=crop",
+    budget: "£290k", duration: "5 months", year: "2024",
+    brief: "Luxury fit-out of a lateral apartment in W8 — bespoke joinery throughout, marble bathrooms, and a full Lutron lighting system.",
+    scope: ["Bespoke joinery", "Marble bathrooms", "Flooring & tiling", "Lutron lighting", "Decorating"] },
   { t: "Richmond Mews", s: "Development · 6 units · TW9", tag: "Development", cls: "full", label: "RICHMOND MEWS",
-    img: "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=1200&q=85&auto=format&fit=crop" },
+    img: "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=1200&q=85&auto=format&fit=crop",
+    budget: "£2.1m", duration: "18 months", year: "2023",
+    brief: "A six-unit mews development from groundwork to handover — planning managed, all units sold off-plan before completion.",
+    scope: ["Planning & development", "New build construction", "Interior design", "Landscaping", "Sales support"] },
 ];
 
 const STEPS = [
@@ -84,4 +96,20 @@ const TESTIMONIALS = [
   { q: "From planning headaches to the final handover, they guided us calmly through the whole journey.", nm: "Priya & Arun Mehta", rl: "Refurbishment · Islington", stars: 5 },
 ];
 
-Object.assign(window, { NAV_LINKS, ACCREDS, SERVICES, STATS, PROJECTS, STEPS, TESTIMONIALS });
+const VALUES = [
+  { icon: "◈", h: "Craftsmanship", p: "Every detail matters. We hold ourselves to a standard most companies talk about but few actually deliver." },
+  { icon: "◈", h: "Transparency", p: "Fixed costs, honest timelines and open communication from day one through to long after handover." },
+  { icon: "◈", h: "Family Values", p: "We treat every client's home as if it were our own — with the care, pride and attention it deserves." },
+  { icon: "◈", h: "Excellence", p: "We work only with the best tradespeople, materials and suppliers. There is no shortcut that is worth taking." },
+  { icon: "◈", h: "Progressive", p: "Embracing smart home technology, sustainable methods and modern construction techniques on every project." },
+  { icon: "◈", h: "Aftercare", p: "Our relationship does not end at handover. Dedicated post-build support and warranties you can count on." },
+];
+
+const TRADES = [
+  { cat: "Structure & Shell", items: ["New build construction", "Extensions & additions", "Loft conversions", "Basement excavation", "Structural alterations"] },
+  { cat: "Fit-out & Finish", items: ["Kitchen & bathroom fitting", "Flooring & tiling", "Plastering & rendering", "Joinery & bespoke carpentry", "Painting & decorating"] },
+  { cat: "Mechanical & Electrical", items: ["Plumbing & heating", "Electrical installation", "Underfloor heating", "Air conditioning", "Smart home & home automation"] },
+  { cat: "Security & Technology", items: ["CCTV & alarm systems", "Access control", "AV & home cinema", "EV charging points", "Solar & renewables"] },
+];
+
+Object.assign(window, { NAV_LINKS, ACCREDS, SERVICES, STATS, PROJECTS, STEPS, TESTIMONIALS, VALUES, TRADES });
