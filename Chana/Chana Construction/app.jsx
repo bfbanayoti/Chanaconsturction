@@ -48,7 +48,6 @@ function PageContent() {
         <WhyChana />
         <TradesList />
         <Process />
-        <Testimonials />
         <CtaBand />
       </React.Fragment>
     );
