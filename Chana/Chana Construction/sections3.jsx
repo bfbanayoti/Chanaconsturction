@@ -18,7 +18,7 @@ function Projects() {
       </div>
       <div className="proj-grid">
         {PROJECTS.map((p, i) => (
-          <article className={`proj ${p.cls} reveal ${i ? "d" + i : ""}`} key={p.t}>
+          <article className={`proj ${p.cls} reveal ${i ? "d" + i : ""}`} key={p.t} onClick={() => { if(p.slug) window.location.href = p.slug + ".html"; }} style={{cursor:"pointer"}}>
             <span className="tag">{p.tag}</span>
             <div className="proj-img">
               {p.img
@@ -273,4 +273,67 @@ function ProjectBreakdown() {
   );
 }
 
-Object.assign(window, { Projects, Process, Testimonials, Contact, Footer, ProjectBreakdown });
+function ProjectDetail() {
+  const slug = (typeof window !== "undefined" && window.PROJECT_SLUG) || "";
+  const p = PROJECTS.find(x => x.slug === slug) || PROJECTS[0];
+  return (
+    <React.Fragment>
+      {/* Hero image */}
+      <section className="proj-detail-hero">
+        <img src={p.img} alt={p.t} />
+        <div className="proj-detail-hero-overlay">
+          <div className="wrap">
+            <a className="back-link" data-pagelink href="Projects.html"><span>←</span> All projects</a>
+            <span className="tag" style={{marginLeft:"auto"}}>{p.tag}</span>
+          </div>
+        </div>
+      </section>
+
+      {/* Title + specs */}
+      <section className="section" id="proj-detail-intro">
+        <div className="wrap proj-detail-grid">
+          <div>
+            <div className="eyebrow reveal" style={{marginBottom:"22px"}}>{p.s}</div>
+            <h1 className="reveal d1" style={{fontFamily:"var(--serif)", fontSize:"clamp(36px,5vw,72px)", lineHeight:0.96, letterSpacing:"-0.02em"}}>{p.t}</h1>
+            <p className="reveal d2" style={{marginTop:"28px", fontSize:"17px", lineHeight:1.7, color:"var(--ink-soft)", maxWidth:"52ch"}}>{p.brief}</p>
+            <a className="btn reveal d3" style={{display:"inline-flex", marginTop:"36px"}} data-pagelink href="Contact.html">Start a similar project <Arrow /></a>
+          </div>
+          <div className="proj-detail-stats reveal d1">
+            {[{k:"Budget",v:p.budget},{k:"Duration",v:p.duration},{k:"Completed",v:p.year},{k:"Type",v:p.tag}].map(st => (
+              <div className="pb-stat" key={st.k}>
+                <span className="k">{st.k}</span>
+                <span className="v">{st.v}</span>
+              </div>
+            ))}
+            <div className="proj-detail-scope">
+              <span className="pb-scope-label">Scope of works</span>
+              <ul>
+                {p.scope.map(s => <li key={s}><span className="trade-dot" />{s}</li>)}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Other projects */}
+      <section className="section proj-others-bg">
+        <div className="wrap">
+          <div className="eyebrow reveal" style={{marginBottom:"32px"}}>More projects</div>
+          <div className="proj-others-grid">
+            {PROJECTS.filter(x => x.slug !== slug).map((op, i) => (
+              <a key={op.t} className={`proj-other reveal ${i ? "d"+i : ""}`} data-pagelink href={op.slug + ".html"}>
+                <div className="proj-img"><img src={op.img} alt={op.t} loading="lazy" /></div>
+                <div className="meta">
+                  <div><div className="t">{op.t}</div><div className="s">{op.s}</div></div>
+                  <ArrowUR s={18} />
+                </div>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+    </React.Fragment>
+  );
+}
+
+Object.assign(window, { Projects, Process, Testimonials, Contact, Footer, ProjectBreakdown, ProjectDetail });

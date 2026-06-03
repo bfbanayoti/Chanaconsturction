@@ -46,7 +46,9 @@ function PageContent() {
         <PageHero {...PAGE_META.services} />
         <Services />
         <TradesList />
-        <Marquee />
+        <Process />
+        <Stats />
+        <Testimonials />
         <CtaBand />
       </React.Fragment>
     );
@@ -57,7 +59,16 @@ function PageContent() {
         <PageHero {...PAGE_META.projects} />
         <Projects />
         <ProjectBreakdown />
-        <Marquee />
+        <Stats />
+        <Testimonials />
+        <CtaBand />
+      </React.Fragment>
+    );
+  }
+  if (PAGE === "project-detail") {
+    return (
+      <React.Fragment>
+        <ProjectDetail />
         <CtaBand />
       </React.Fragment>
     );
