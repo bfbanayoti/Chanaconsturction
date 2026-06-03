@@ -18,7 +18,7 @@ function Projects() {
       </div>
       <div className="proj-grid">
         {PROJECTS.map((p, i) => (
-          <article className={`proj ${p.cls} reveal ${i ? "d" + i : ""}`} key={p.t} onClick={() => { if(p.slug) window.location.href = p.slug + ".html"; }} style={{cursor:"pointer"}}>
+          <article className={`proj ${p.cls} reveal ${i ? "d" + i : ""}`} key={p.t}>
             <span className="tag">{p.tag}</span>
             <div className="proj-img">
               {p.img
@@ -34,13 +34,13 @@ function Projects() {
                 <span>{p.year}</span>
               </div>
             )}
-            <div className="meta">
+            <a className="meta" data-pagelink href={p.slug ? p.slug + ".html" : "#"}>
               <div>
                 <div className="t">{p.t}</div>
                 <div className="s">{p.s}</div>
               </div>
               <ArrowUR s={22} />
-            </div>
+            </a>
           </article>
         ))}
       </div></div>
