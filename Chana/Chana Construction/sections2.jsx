@@ -77,36 +77,95 @@ function SvcAnim({ index, active }) {
 /* ---- animation scenes ---- */
 
 function drawLandScan(ctx, W, H, t, accent) {
-  // Animated topographic map — scan line sweeps over contours
-  const cx = W / 2, cy = H / 2;
+  // Construction site survey — concentric plot rings + scan sweep + building footprint
+  const cx = W / 2, cy = H * 0.5;
+
+  // — survey contour rings (same elegant style, slightly more elliptical like a site plan)
   const rings = 7;
   for (let i = 0; i < rings; i++) {
-    const r = (i + 1) * Math.min(W, H) * 0.072;
+    const rx = (i + 1) * W * 0.075;
+    const ry = (i + 1) * H * 0.062;
     const phase = t * 0.4 - i * 0.25;
-    const alpha = 0.12 + 0.1 * Math.sin(phase);
+    const alpha = 0.11 + 0.09 * Math.sin(phase);
     ctx.beginPath();
-    ctx.arc(cx + Math.sin(t * 0.3 + i) * 8, cy + Math.cos(t * 0.25 + i * 0.7) * 5, r, 0, Math.PI * 2);
+    ctx.ellipse(cx, cy, rx, ry, 0, 0, Math.PI * 2);
     ctx.strokeStyle = `rgba(176,91,54,${alpha})`;
     ctx.lineWidth = 1;
     ctx.stroke();
   }
-  // scan line
-  const scanY = ((t * 0.5 % 1) * H);
-  const grad = ctx.createLinearGradient(0, scanY - 30, 0, scanY + 30);
-  grad.addColorStop(0, "rgba(176,91,54,0)");
-  grad.addColorStop(0.5, "rgba(176,91,54,0.22)");
-  grad.addColorStop(1, "rgba(176,91,54,0)");
+
+  // — horizontal scan sweep
+  const scanY = (t * 0.45 % 1) * H;
+  const grad = ctx.createLinearGradient(0, scanY - 28, 0, scanY + 28);
+  grad.addColorStop(0,   "rgba(176,91,54,0)");
+  grad.addColorStop(0.5, "rgba(176,91,54,0.2)");
+  grad.addColorStop(1,   "rgba(176,91,54,0)");
   ctx.fillStyle = grad;
-  ctx.fillRect(0, scanY - 30, W, 60);
-  // pin
-  const pinX = cx + Math.sin(t * 0.2) * 18, pinY = cy + Math.cos(t * 0.15) * 12;
+  ctx.fillRect(0, scanY - 28, W, 56);
+
+  // — building footprint (simple L-shaped plan, fades in then loops)
+  const cycle = 7;
+  const fp = Math.min(1, (t % cycle) / 3.5);
+  if (fp > 0) {
+    const bw = W * 0.28, bh = H * 0.22;
+    const bx = cx - bw / 2, by = cy - bh / 2;
+    // main rectangle outline drawing itself
+    const perim = 2 * (bw + bh);
+    ctx.save();
+    ctx.strokeStyle = `rgba(176,91,54,${0.55 * fp})`;
+    ctx.lineWidth = 1.5;
+    ctx.setLineDash([perim * fp, perim]);
+    ctx.lineDashOffset = 0;
+    ctx.strokeRect(bx, by, bw, bh);
+    // internal room divider
+    if (fp > 0.6) {
+      const p2 = (fp - 0.6) / 0.4;
+      ctx.setLineDash([bw * 0.5 * p2, bw]);
+      ctx.beginPath();
+      ctx.moveTo(bx + bw * 0.5, by);
+      ctx.lineTo(bx + bw * 0.5, by + bh * p2);
+      ctx.strokeStyle = `rgba(176,91,54,${0.3 * p2})`;
+      ctx.lineWidth = 1;
+      ctx.stroke();
+    }
+    ctx.setLineDash([]);
+    ctx.restore();
+
+    // corner survey stakes
+    const corners = [[bx,by],[bx+bw,by],[bx+bw,by+bh],[bx,by+bh]];
+    corners.forEach(([sx, sy]) => {
+      ctx.beginPath();
+      ctx.moveTo(sx - 5, sy); ctx.lineTo(sx + 5, sy);
+      ctx.moveTo(sx, sy - 5); ctx.lineTo(sx, sy + 5);
+      ctx.strokeStyle = `rgba(176,91,54,${0.45 * fp})`;
+      ctx.lineWidth = 1;
+      ctx.stroke();
+    });
+  }
+
+  // — theodolite crosshair at centre
+  const cr = 7;
+  ctx.strokeStyle = `rgba(176,91,54,0.5)`;
+  ctx.lineWidth = 1;
   ctx.beginPath();
-  ctx.arc(pinX, pinY, 5, 0, Math.PI * 2);
+  ctx.moveTo(cx - cr * 2.2, cy); ctx.lineTo(cx - cr * 0.5, cy);
+  ctx.moveTo(cx + cr * 0.5, cy); ctx.lineTo(cx + cr * 2.2, cy);
+  ctx.moveTo(cx, cy - cr * 2.2); ctx.lineTo(cx, cy - cr * 0.5);
+  ctx.moveTo(cx, cy + cr * 0.5); ctx.lineTo(cx, cy + cr * 2.2);
+  ctx.stroke();
+  ctx.beginPath();
+  ctx.arc(cx, cy, cr, 0, Math.PI * 2);
+  ctx.stroke();
+  // centre dot
+  ctx.beginPath();
+  ctx.arc(cx, cy, 2.5, 0, Math.PI * 2);
   ctx.fillStyle = accent;
   ctx.fill();
+  // pulsing ring
+  const pulse = (t * 1.2 % 1);
   ctx.beginPath();
-  ctx.arc(pinX, pinY, 5 + 4 * (Math.sin(t * 2) * 0.5 + 0.5), 0, Math.PI * 2);
-  ctx.strokeStyle = `rgba(176,91,54,0.35)`;
+  ctx.arc(cx, cy, cr + pulse * 14, 0, Math.PI * 2);
+  ctx.strokeStyle = `rgba(176,91,54,${0.3 * (1 - pulse)})`;
   ctx.lineWidth = 1;
   ctx.stroke();
 }
