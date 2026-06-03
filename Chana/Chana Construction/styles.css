@@ -349,16 +349,6 @@ body.loaded .render-line { animation: lineSweep 2.7s cubic-bezier(0.65,0,0.35,1)
     0 20px 60px -16px oklch(0.55 0.030 65 / 0.22),
     0 4px 16px -4px oklch(0.55 0.025 65 / 0.1);
   padding: clamp(36px, 4vw, 60px) clamp(32px, 4vw, 56px);
-  transition: transform 0.5s cubic-bezier(0.22,1,0.36,1), box-shadow 0.5s cubic-bezier(0.22,1,0.36,1);
-  will-change: transform;
-}
-.cta-glass:hover {
-  transform: translateY(-7px);
-  box-shadow:
-    0 1.5px 0 0 oklch(1 0 0 / 0.95) inset,
-    0 -1px 0 0 oklch(0.72 0.015 70 / 0.15) inset,
-    0 36px 80px -20px oklch(0.55 0.030 65 / 0.28),
-    0 8px 28px -6px oklch(0.55 0.025 65 / 0.14);
 }
 @supports not (backdrop-filter: blur(1px)) {
   .cta-glass { background: oklch(0.97 0.008 78 / 0.92); }

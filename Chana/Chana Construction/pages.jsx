@@ -23,7 +23,7 @@ function CtaBand() {
   return (
     <section className="cta-band">
       <div className="wrap">
-        <div className="cta-glass">
+        <div className="cta-glass reveal">
           <div className="cta-inner">
             <div className="reveal">
               <div className="eyebrow" style={{ marginBottom: "20px" }}>Start your project</div>
