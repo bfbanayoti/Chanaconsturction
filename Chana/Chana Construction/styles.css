@@ -324,12 +324,11 @@ body.loaded .render-line { animation: lineSweep 2.7s cubic-bezier(0.65,0,0.35,1)
    ============================================================ */
 .cta-band {
   background:
-    radial-gradient(ellipse 70% 80% at 10% 60%,  oklch(0.72 0.10 48)  0%, transparent 65%),
-    radial-gradient(ellipse 55% 65% at 85% 20%,  oklch(0.78 0.09 72)  0%, transparent 60%),
-    radial-gradient(ellipse 60% 55% at 55% 90%,  oklch(0.65 0.08 38)  0%, transparent 58%),
-    radial-gradient(ellipse 50% 70% at 90% 75%,  oklch(0.80 0.07 82)  0%, transparent 62%),
-    radial-gradient(ellipse 80% 40% at 30% 10%,  oklch(0.86 0.06 65)  0%, transparent 55%),
-    oklch(0.82 0.04 68);
+    radial-gradient(ellipse 65% 90% at 5%  55%,  oklch(0.88 0.030 60)  0%, transparent 60%),
+    radial-gradient(ellipse 50% 60% at 92% 15%,  oklch(0.92 0.018 78)  0%, transparent 55%),
+    radial-gradient(ellipse 55% 50% at 60% 95%,  oklch(0.86 0.022 55)  0%, transparent 55%),
+    radial-gradient(ellipse 45% 65% at 88% 80%,  oklch(0.93 0.014 82)  0%, transparent 58%),
+    oklch(0.946 0.010 76);
   color: var(--ink);
   border-top: 1px solid var(--line);
   padding-block: clamp(48px, 6vw, 88px);
