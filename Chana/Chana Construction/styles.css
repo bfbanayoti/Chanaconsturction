@@ -567,7 +567,8 @@ body.loaded .render-line { animation: lineSweep 2.7s cubic-bezier(0.65,0,0.35,1)
   color: var(--ink); background: oklch(0.976 0.006 85 / 0.9); padding: 6px 10px; border-radius: 99px;
 }
 .proj.tall { grid-column: span 6; aspect-ratio: 4/5; }
-.proj.wide { grid-column: span 6; min-height: 260px; }
+.proj.wide { grid-column: span 6; aspect-ratio: 16/11; }
+.proj.sqr  { grid-column: span 6; aspect-ratio: 16/11; }
 .proj.full { grid-column: span 12; aspect-ratio: 21/8; }
 @media (max-width: 760px) {
   .proj.tall, .proj.wide { grid-column: span 12; aspect-ratio: 4/3; }
