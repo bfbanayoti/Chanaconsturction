@@ -44,10 +44,10 @@ function PageContent() {
     return (
       <React.Fragment>
         <PageHero {...PAGE_META.services} />
-        <Services />
+        <ServiceCards />
+        <WhyChana />
         <TradesList />
         <Process />
-        <Stats />
         <Testimonials />
         <CtaBand />
       </React.Fragment>

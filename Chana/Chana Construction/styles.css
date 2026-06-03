@@ -731,6 +731,42 @@ body.loaded .render-line { animation: lineSweep 2.7s cubic-bezier(0.65,0,0.35,1)
 @media (max-width: 820px) { .footer-top { grid-template-columns: 1fr 1fr; gap: 30px; } }
 
 /* ============================================================
+   SERVICE CARDS (Services page) — LIGHT
+   ============================================================ */
+.svc-cards-bg { background: var(--paper); }
+.svc-cards-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(16px, 2vw, 24px); margin-top: clamp(32px, 4vw, 52px); }
+.svc-card {
+  background: var(--paper-2); border: 1px solid var(--line); border-radius: 10px;
+  overflow: hidden; display: flex; flex-direction: column;
+  transition: transform .5s var(--ease), box-shadow .5s var(--ease);
+}
+.svc-card:hover { transform: translateY(-5px); box-shadow: 0 20px 48px -16px oklch(0.5 0.04 60 / 0.14); }
+.svc-card-anim { height: 180px; background: var(--paper-3); flex: none; }
+.svc-card-body { padding: clamp(20px, 2.4vw, 32px); display: flex; flex-direction: column; gap: 10px; flex: 1; }
+.svc-card-num { font-family: var(--mono); font-size: 11px; letter-spacing: .14em; color: var(--accent); }
+.svc-card-name { font-family: var(--serif); font-size: clamp(18px, 1.8vw, 24px); font-weight: 400; color: var(--ink); line-height: 1.1; }
+.svc-card-desc { font-size: 14px; line-height: 1.65; color: var(--ink-soft); flex: 1; }
+@media (max-width: 900px) { .svc-cards-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) { .svc-cards-grid { grid-template-columns: 1fr; } }
+
+/* ============================================================
+   WHY CHANA (Services page) — DARK
+   ============================================================ */
+.why-bg { background: var(--ink); color: var(--paper); }
+.why-bg .eyebrow { color: color-mix(in oklch, var(--accent) 60%, white); }
+.why-bg .eyebrow::before { background: var(--accent); }
+.why-bg .sec-head h2 { color: var(--paper); }
+.why-bg .sec-head .lead { color: oklch(0.78 0.01 80); }
+.why-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; border-top: 1px solid oklch(1 0 0 / 0.1); }
+.why-item { padding: clamp(28px, 3.2vw, 48px) clamp(20px, 2.4vw, 36px); border-right: 1px solid oklch(1 0 0 / 0.1); display: flex; flex-direction: column; gap: 14px; }
+.why-item:last-child { border-right: none; }
+.why-n { font-family: var(--mono); font-size: 12px; letter-spacing: .12em; color: var(--accent); }
+.why-h { font-family: var(--serif); font-size: clamp(18px, 1.8vw, 24px); font-weight: 400; color: var(--paper); line-height: 1.1; }
+.why-p { font-size: 14px; line-height: 1.65; color: oklch(0.72 0.01 80); }
+@media (max-width: 900px) { .why-grid { grid-template-columns: 1fr 1fr; } .why-item { border-right: none; border-bottom: 1px solid oklch(1 0 0 / 0.1); } }
+@media (max-width: 540px) { .why-grid { grid-template-columns: 1fr; } }
+
+/* ============================================================
    FOUNDER STORY (About page) — DARK
    ============================================================ */
 .founder-bg { background: var(--ink); color: var(--paper); }

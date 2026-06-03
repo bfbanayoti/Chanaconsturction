@@ -392,6 +392,41 @@ function About() {
   );
 }
 
+/* Visual service cards — shown on Services page */
+function ServiceCards() {
+  return (
+    <section className="section svc-cards-bg" id="service-cards">
+      <div className="wrap">
+        <div className="sec-head">
+          <div>
+            <div className="eyebrow reveal">What we offer</div>
+            <h2 className="reveal d1">Every stage.<br />One team.</h2>
+          </div>
+          <p className="lead reveal d2">
+            From securing the right plot to handing over the keys — and everything after —
+            we manage it all under one roof so nothing falls through the cracks.
+          </p>
+        </div>
+        <div className="svc-cards-grid">
+          {SERVICES.map((s, i) => (
+            <div className={`svc-card reveal ${i % 3 ? "d" + (i % 3) : ""}`} key={s.name}>
+              <div className="svc-card-anim">
+                <SvcAnim index={i} active={true} />
+              </div>
+              <div className="svc-card-body">
+                <span className="svc-card-num">{String(i + 1).padStart(2, "0")}</span>
+                <h3 className="svc-card-name">{s.name}</h3>
+                <p className="svc-card-desc">{s.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* Interactive deep-dive panel — shown on home page */
 function Services() {
   const [active, setActive] = uS2(0);
   return (
@@ -433,6 +468,41 @@ function Services() {
             ))}
             <div className="cap">{SERVICES[active].cap}</div>
           </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+const WHY_ITEMS = [
+  { n: "01", h: "Single point of contact", p: "One dedicated project manager from first call to final handover. No juggling contractors, no crossed wires." },
+  { n: "02", h: "Fixed, transparent pricing", p: "We cost projects thoroughly before work begins. What we quote is what you pay — no hidden variations." },
+  { n: "03", h: "In-house trades network", p: "Our vetted team handles every discipline — structure, M&E, fit-out, smart home — under one contract." },
+  { n: "04", h: "10-year structural warranty", p: "Every new-build we complete comes with a full 10-year structural warranty and dedicated aftercare support." },
+];
+
+function WhyChana() {
+  return (
+    <section className="section why-bg" id="why-chana">
+      <div className="wrap">
+        <div className="sec-head">
+          <div>
+            <div className="eyebrow reveal">Why Chana</div>
+            <h2 className="reveal d1">The difference<br />is in the detail.</h2>
+          </div>
+          <p className="lead reveal d2">
+            We are not the biggest firm in London. We are deliberate about that — it means every
+            client gets the principals, not the juniors.
+          </p>
+        </div>
+        <div className="why-grid">
+          {WHY_ITEMS.map((w, i) => (
+            <div className={`why-item reveal ${i ? "d" + (i % 3) : ""}`} key={w.h}>
+              <span className="why-n">{w.n}</span>
+              <h3 className="why-h">{w.h}</h3>
+              <p className="why-p">{w.p}</p>
+            </div>
+          ))}
         </div>
       </div>
     </section>
@@ -557,4 +627,4 @@ function TradesList() {
   );
 }
 
-Object.assign(window, { About, Services, Stats, FounderStory, Values, TradesList });
+Object.assign(window, { About, Services, ServiceCards, Stats, FounderStory, Values, TradesList, WhyChana });
