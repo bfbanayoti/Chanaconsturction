@@ -61,7 +61,7 @@ const STATS = [
 
 const PROJECTS = [
   { t: "Hampstead House", s: "New build · 5 bed · NW3", tag: "New Build", cls: "tall", label: "HAMPSTEAD HOUSE",
-    img: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=85&auto=format&fit=crop" },
+    img: "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=800&q=85&auto=format&fit=crop" },
   { t: "Islington Townhouse", s: "Refurbishment · Period home · N1", tag: "Refurbishment", cls: "wide", label: "ISLINGTON TOWNHOUSE",
     img: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=900&q=85&auto=format&fit=crop" },
   { t: "Kensington Apartment", s: "Interior fit-out · 3 bed · W8", tag: "Interior", cls: "sqr", label: "KENSINGTON APARTMENT",
