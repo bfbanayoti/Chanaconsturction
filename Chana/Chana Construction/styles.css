@@ -322,13 +322,13 @@ body.loaded .render-line { animation: lineSweep 2.7s cubic-bezier(0.65,0,0.35,1)
 /* ============================================================
    CTA BAND
    ============================================================ */
-.cta-band { background: var(--ink); color: var(--paper); }
+.cta-band { background: var(--paper); color: var(--ink); border-top: 1px solid var(--line); }
 .cta-inner { display: grid; grid-template-columns: 1.25fr 1fr; gap: clamp(32px, 6vw, 80px); align-items: end; padding-block: clamp(48px, 6vw, 88px); }
-.cta-band h2 { font-family: var(--serif); font-weight: 400; font-size: clamp(40px, 6vw, 94px); line-height: 0.92; letter-spacing: -0.02em; color: var(--paper); }
-.cta-band .eyebrow { color: color-mix(in oklch, var(--accent) 62%, white); }
+.cta-band h2 { font-family: var(--serif); font-weight: 400; font-size: clamp(40px, 6vw, 94px); line-height: 0.92; letter-spacing: -0.02em; color: var(--ink); }
+.cta-band .eyebrow { color: var(--accent-deep); }
 .cta-band .eyebrow::before { background: var(--accent); }
-.cta-aside p { color: oklch(0.8 0.01 80); font-size: 17px; line-height: 1.6; margin-bottom: 28px; max-width: 36ch; }
-.cta-band .btn { background: var(--paper); color: var(--ink); }
+.cta-aside p { color: var(--ink-soft); font-size: 17px; line-height: 1.6; margin-bottom: 28px; max-width: 36ch; }
+.cta-band .btn { background: var(--ink); color: var(--paper); }
 .cta-band .btn:hover { background: var(--accent); color: var(--paper); }
 @media (max-width: 820px) { .cta-inner { grid-template-columns: 1fr; gap: 28px; align-items: start; } }
 
