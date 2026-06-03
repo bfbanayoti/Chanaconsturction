@@ -32,7 +32,7 @@ function PageContent() {
         <PageHero {...PAGE_META.about} />
         <About />
         <FounderStory />
-        <Stats />
+        <Stats eyebrow="By the numbers" heading="Standards we hold ourselves to." sub="These are not targets — they are the baseline commitments every Chana client can expect, on every project, without exception." />
         <Values />
         <Process />
         <Testimonials />
@@ -57,9 +57,8 @@ function PageContent() {
     return (
       <React.Fragment>
         <PageHero {...PAGE_META.projects} />
-        <Projects />
         <ProjectBreakdown />
-        <Stats />
+        <Projects />
         <Testimonials />
         <CtaBand />
       </React.Fragment>

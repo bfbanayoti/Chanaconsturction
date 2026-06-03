@@ -509,17 +509,16 @@ function WhyChana() {
   );
 }
 
-function Stats() {
+function Stats({ eyebrow, heading, sub }) {
   return (
     <section className="section" id="stats">
       <div className="wrap"><div className="sec-head">
         <div>
-          <div className="eyebrow reveal">Our track record</div>
-          <h2 className="reveal d1">Measured by trust.</h2>
+          <div className="eyebrow reveal">{eyebrow || "Our track record"}</div>
+          <h2 className="reveal d1">{heading || "Measured by trust."}</h2>
         </div>
         <p className="lead reveal d2">
-          Our success is measured not only by the quality of the homes we create, but by the confidence
-          of the clients we serve.
+          {sub || "Our success is measured not only by the quality of the homes we create, but by the confidence of the clients we serve."}
         </p>
       </div>
       <div className="stats reveal d1">
