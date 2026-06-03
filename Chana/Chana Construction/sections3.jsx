@@ -5,8 +5,8 @@ const { useState: uS3 } = React;
 
 function Projects() {
   return (
-    <section className="section wrap" id="projects">
-      <div className="sec-head">
+    <section className="section" id="projects">
+      <div className="wrap"><div className="sec-head">
         <div>
           <div className="eyebrow reveal">Portfolio</div>
           <h2 className="reveal d1">A closer look.</h2>
@@ -34,7 +34,7 @@ function Projects() {
             </div>
           </article>
         ))}
-      </div>
+      </div></div>
     </section>
   );
 }
@@ -69,8 +69,8 @@ function Process() {
 
 function Testimonials() {
   return (
-    <section className="section wrap" id="testimonials">
-      <div className="sec-head">
+    <section className="section" id="testimonials">
+      <div className="wrap"><div className="sec-head">
         <div>
           <div className="eyebrow reveal">Client care</div>
           <h2 className="reveal d1">Relationships<br />that last.</h2>
@@ -93,7 +93,7 @@ function Testimonials() {
             </div>
           </div>
         ))}
-      </div>
+      </div></div>
     </section>
   );
 }

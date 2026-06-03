@@ -382,8 +382,8 @@ function Services() {
 
 function Stats() {
   return (
-    <section className="section wrap" id="stats">
-      <div className="sec-head">
+    <section className="section" id="stats">
+      <div className="wrap"><div className="sec-head">
         <div>
           <div className="eyebrow reveal">Our track record</div>
           <h2 className="reveal d1">Measured by trust.</h2>
@@ -404,7 +404,7 @@ function Stats() {
             <div className="k">{st.k}</div>
           </div>
         ))}
-      </div>
+      </div></div>
     </section>
   );
 }
