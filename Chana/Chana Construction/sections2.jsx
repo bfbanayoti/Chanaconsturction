@@ -81,7 +81,7 @@ function Services() {
 
 function Stats() {
   return (
-    <section className="section wrap">
+    <section className="section wrap" id="stats">
       <div className="sec-head">
         <div>
           <div className="eyebrow reveal">Our track record</div>

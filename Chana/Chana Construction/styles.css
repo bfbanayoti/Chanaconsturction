@@ -466,20 +466,8 @@ body.loaded .render-line { animation: lineSweep 2.7s cubic-bezier(0.65,0,0.35,1)
 /* ============================================================
    SERVICES — interactive numbered list w/ preview
    ============================================================ */
-.services-bg { background: var(--ink); color: var(--paper); border-block: none; }
-.services-bg .eyebrow { color: color-mix(in oklch, var(--accent) 60%, white); }
-.services-bg .eyebrow::before { background: var(--accent); }
-.services-bg .sec-head h2 { color: var(--paper); }
-.services-bg .sec-head .lead { color: oklch(0.78 0.01 80); }
-.services-bg .svc-list { border-top: 1px solid oklch(1 0 0 / 0.12); }
-.services-bg .svc-row { border-bottom: 1px solid oklch(1 0 0 / 0.12); }
-.services-bg .svc-row .num { color: oklch(0.65 0.01 80); }
-.services-bg .svc-row .name { color: oklch(0.88 0.01 80); }
-.services-bg .svc-row:hover .name, .services-bg .svc-row.active .name { color: var(--paper); }
-.services-bg .svc-row::before { background: oklch(1 0 0 / 0.05); opacity: 0; }
-.services-bg .svc-row.active::before { opacity: 1; }
-.services-bg .svc-row .desc { color: oklch(0.72 0.01 80); }
-.services-bg .svc-preview { border-color: oklch(1 0 0 / 0.12); }
+/* Services → LIGHT */
+.services-bg { background: var(--paper); border-block: 1px solid var(--line); }
 .svc-layout { display: grid; grid-template-columns: 1fr 0.78fr; gap: clamp(36px, 6vw, 88px); align-items: start; }
 .svc-list { border-top: 1px solid var(--line-2); }
 .svc-row {
@@ -523,6 +511,17 @@ body.loaded .render-line { animation: lineSweep 2.7s cubic-bezier(0.65,0,0.35,1)
 }
 @media (max-width: 900px) { .svc-layout { grid-template-columns: 1fr; } .svc-preview { display: none; } }
 
+/* Stats → DARK */
+#stats { background: var(--ink); color: var(--paper); }
+#stats .eyebrow { color: color-mix(in oklch, var(--accent) 60%, white); }
+#stats .eyebrow::before { background: var(--accent); }
+#stats .sec-head h2 { color: var(--paper); }
+#stats .sec-head .lead { color: oklch(0.78 0.01 80); }
+#stats .stat { background: oklch(1 0 0 / 0.04); }
+#stats .stat .v { color: var(--paper); }
+#stats .stat .k { color: oklch(0.72 0.01 80); }
+#stats .stats { background: oklch(1 0 0 / 0.08); border-color: oklch(1 0 0 / 0.1); }
+
 /* ============================================================
    STATS
    ============================================================ */
@@ -532,6 +531,14 @@ body.loaded .render-line { animation: lineSweep 2.7s cubic-bezier(0.65,0,0.35,1)
 .stat .v .suf { color: var(--accent-deep); }
 .stat .k { margin-top: 14px; font-size: 14px; color: var(--ink-soft); line-height: 1.4; max-width: 22ch; }
 @media (max-width: 900px) { .stats { grid-template-columns: repeat(2, 1fr); } }
+
+/* Projects → DARK */
+#projects { background: var(--ink); color: var(--paper); }
+#projects .eyebrow { color: color-mix(in oklch, var(--accent) 60%, white); }
+#projects .eyebrow::before { background: var(--accent); }
+#projects .sec-head h2 { color: var(--paper); }
+#projects .sec-head .lead { color: oklch(0.78 0.01 80); }
+#projects .proj { border-color: oklch(1 0 0 / 0.1); }
 
 /* ============================================================
    PROJECTS gallery
@@ -565,11 +572,17 @@ body.loaded .render-line { animation: lineSweep 2.7s cubic-bezier(0.65,0,0.35,1)
 /* ============================================================
    PROCESS
    ============================================================ */
-.process-bg { background: var(--ink); color: var(--paper); }
-.process-bg .eyebrow { color: color-mix(in oklch, var(--accent) 60%, white); }
+/* Process → LIGHT */
+.process-bg { background: var(--paper); color: var(--ink); border-block: 1px solid var(--line); }
+.process-bg .eyebrow { color: var(--accent-deep); }
 .process-bg .eyebrow::before { background: var(--accent); }
-.process-bg .sec-head h2 { color: var(--paper); }
-.process-bg .sec-head .lead { color: oklch(0.78 0.01 80); }
+.process-bg .sec-head h2 { color: var(--ink); }
+.process-bg .sec-head .lead { color: var(--ink-soft); }
+.process-bg .steps { border-top: 1px solid var(--line); }
+.process-bg .step { border-bottom: 1px solid var(--line); }
+.process-bg .step .n { color: var(--accent-deep); }
+.process-bg .step .h { color: var(--ink); }
+.process-bg .step .p { color: var(--ink-soft); }
 .steps { border-top: 1px solid oklch(1 0 0 / 0.14); }
 .step {
   display: grid; grid-template-columns: 90px 1fr 1.1fr; gap: clamp(20px, 4vw, 60px);
@@ -585,7 +598,18 @@ body.loaded .render-line { animation: lineSweep 2.7s cubic-bezier(0.65,0,0.35,1)
 /* ============================================================
    TESTIMONIALS
    ============================================================ */
-#testimonials { background: var(--paper-2); border-top: 1px solid var(--line); }
+/* Testimonials → DARK */
+#testimonials { background: var(--ink); color: var(--paper); }
+#testimonials .eyebrow { color: color-mix(in oklch, var(--accent) 60%, white); }
+#testimonials .eyebrow::before { background: var(--accent); }
+#testimonials .sec-head h2 { color: var(--paper); }
+#testimonials .sec-head .lead { color: oklch(0.78 0.01 80); }
+#testimonials .testi { background: oklch(1 0 0 / 0.04); border-color: oklch(1 0 0 / 0.1); }
+#testimonials .testi:hover { background: oklch(1 0 0 / 0.08); }
+#testimonials .testi .q { color: var(--paper); }
+#testimonials .testi .who .nm { color: var(--paper); }
+#testimonials .testi .who .rl { color: oklch(0.65 0.01 80); }
+#testimonials .testi::before { color: var(--accent); opacity: 0.15; }
 .testi-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(16px, 1.8vw, 26px); }
 .testi {
   background: var(--paper); border: 1px solid var(--line); border-radius: 8px;
