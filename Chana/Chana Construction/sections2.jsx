@@ -626,4 +626,134 @@ function TradesList() {
   );
 }
 
-Object.assign(window, { About, Services, ServiceCards, Stats, FounderStory, Values, TradesList, WhyChana });
+function AccredsBand() {
+  const items = [
+    { badge: "CHAS", sub: "Accredited Contractor" },
+    { badge: "Constructionline", sub: "Gold Member" },
+    { badge: "ISO 9001", sub: "Quality Management" },
+    { badge: "NHBC", sub: "Registered Builder" },
+    { badge: "FMB", sub: "Federation of Master Builders" },
+    { badge: "TrustMark", sub: "Government Endorsed" },
+  ];
+  return (
+    <section className="section accreds-bg" id="accreditations">
+      <div className="wrap">
+        <div className="sec-head">
+          <div>
+            <div className="eyebrow reveal">Credentials</div>
+            <h2 className="reveal d1">Built on trust,<br />backed by proof.</h2>
+          </div>
+          <p className="lead reveal d2">
+            Every accreditation we hold is a promise to you — independently verified standards
+            across safety, quality and professionalism, on every project we undertake.
+          </p>
+        </div>
+        <div className="accreds-grid">
+          {items.map((a, i) => (
+            <div className={`accred-card reveal ${i ? "d"+(i%3) : ""}`} key={a.badge}>
+              <span className="accred-badge">{a.badge}</span>
+              <span className="accred-sub">{a.sub}</span>
+            </div>
+          ))}
+        </div>
+        <p className="accreds-note reveal d2">
+          We carry £5m public liability insurance, £2m employer's liability and full professional
+          indemnity cover — giving you complete peace of mind from groundwork to handover.
+        </p>
+      </div>
+    </section>
+  );
+}
+
+const MAP_PINS = [
+  { area: "Hampstead",    note: "NW3",           lat: 51.5560, lng: -0.1782 },
+  { area: "Islington",   note: "N1",            lat: 51.5362, lng: -0.1033 },
+  { area: "Kensington",  note: "W8",            lat: 51.5000, lng: -0.1919 },
+  { area: "Chelsea",     note: "SW3",           lat: 51.4875, lng: -0.1687 },
+  { area: "Richmond",    note: "TW9",           lat: 51.4613, lng: -0.3037 },
+  { area: "Notting Hill",note: "W11",           lat: 51.5138, lng: -0.2044 },
+  { area: "Mayfair",     note: "W1K",           lat: 51.5117, lng: -0.1489 },
+  { area: "Marylebone",  note: "W1U",           lat: 51.5194, lng: -0.1548 },
+  { area: "Fulham",      note: "SW6",           lat: 51.4751, lng: -0.1993 },
+  { area: "Greenwich",   note: "SE10",          lat: 51.4828, lng: -0.0098 },
+  { area: "Canary Wharf",note: "E14",           lat: 51.5054, lng: -0.0235 },
+];
+
+function WhereWeBuild() {
+  const mapRef = uR2(null);
+  const instanceRef = uR2(null);
+  const [active, setActive] = uS2(false);
+
+  uE2(() => {
+    if (!window.L || instanceRef.current) return;
+    const accent = getComputedStyle(document.documentElement).getPropertyValue("--accent").trim() || "#b05b36";
+
+    const map = window.L.map(mapRef.current, {
+      center: [51.505, -0.13],
+      zoom: 11,
+      zoomControl: false,
+      scrollWheelZoom: false,
+      attributionControl: false,
+    });
+    instanceRef.current = map;
+
+    // Dark minimal tile layer
+    window.L.tileLayer("https://{s}.basemaps.cartocdn.com/dark_nolabels/{z}/{x}/{y}{r}.png", {
+      maxZoom: 19,
+    }).addTo(map);
+
+    // Custom terracotta SVG marker
+    const svgIcon = (label) => window.L.divIcon({
+      className: "",
+      html: `<div class="map-pin"><span class="map-pin-dot"></span><span class="map-pin-label">${label}</span></div>`,
+      iconAnchor: [6, 6],
+    });
+
+    MAP_PINS.forEach(p => {
+      window.L.marker([p.lat, p.lng], { icon: svgIcon(p.area) })
+        .addTo(map)
+        .bindPopup(`<b>${p.area}</b><br><span style="font-family:monospace;font-size:11px;opacity:0.7">${p.note}</span>`, {
+          className: "map-popup",
+          closeButton: false,
+        });
+    });
+
+    window.L.control.zoom({ position: "bottomright" }).addTo(map);
+
+    return () => { map.remove(); instanceRef.current = null; };
+  }, []);
+
+  return (
+    <section className="section where-bg" id="where-we-build">
+      <div className="wrap">
+        <div className="sec-head">
+          <div>
+            <div className="eyebrow reveal">Where we build</div>
+            <h2 className="reveal d1">Across<br />London.</h2>
+          </div>
+          <p className="lead reveal d2">
+            We work across London, from period townhouses in conservation areas
+            to new-build developments and multi-unit schemes. If you're unsure
+            whether we cover your area, just ask.
+          </p>
+        </div>
+      </div>
+      <div className="where-map-wrap reveal d1" style={{position:"relative"}}>
+        <div ref={mapRef} style={{width:"100%",height:"100%"}} />
+        {!active && (
+          <div className="map-overlay" onClick={() => setActive(true)}>
+            <span className="map-overlay-hint">Click to interact</span>
+          </div>
+        )}
+      </div>
+      <div className="wrap">
+        <p className="where-foot reveal d2">
+          Not on the list? We consider projects outside these areas on a case-by-case basis.{" "}
+          <a data-pagelink href="Contact.html" style={{color:"var(--accent)"}}>Get in touch.</a>
+        </p>
+      </div>
+    </section>
+  );
+}
+
+Object.assign(window, { About, Services, ServiceCards, Stats, FounderStory, Values, TradesList, WhyChana, AccredsBand, WhereWeBuild });

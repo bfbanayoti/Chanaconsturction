@@ -35,7 +35,7 @@ function PageContent() {
         <Stats eyebrow="By the numbers" heading="Standards we hold ourselves to." sub="These are not targets — they are the baseline commitments every Chana client can expect, on every project, without exception." />
         <Values />
         <Process />
-        <Testimonials />
+        <WhereWeBuild />
         <CtaBand />
       </React.Fragment>
     );
@@ -48,6 +48,7 @@ function PageContent() {
         <WhyChana />
         <TradesList />
         <Process />
+        <AccredsBand />
         <CtaBand />
       </React.Fragment>
     );
@@ -130,7 +131,12 @@ function App() {
         <PageContent />
       </main>
       <Footer />
-      <div className="curtain"><span className="curtain-mark">Chana</span></div>
+      <div className="curtain">
+        <div className="curtain-inner">
+          <span className="curtain-mark-dot" />
+          <span className="curtain-name"><b>Chana</b> <span>Construction</span></span>
+        </div>
+      </div>
 
       <TweaksPanel>
         <TweakSection label="Brand accent" />

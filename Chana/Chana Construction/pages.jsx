@@ -50,14 +50,15 @@ function setupPageTransitions() {
 
   if (reduce) { curtain.style.display = "none"; }
   else {
-    // ENTER: curtain starts covering, lifts away upward
+    // ENTER: curtain covers on load, shows brand animation, then lifts away
     curtain.style.transform = "translateY(0)";
-    requestAnimationFrame(() => requestAnimationFrame(() => {
-      curtain.style.transition = "transform .85s cubic-bezier(0.76,0,0.24,1)";
+    curtain.style.transition = "none";
+    setTimeout(() => {
+      curtain.style.transition = "transform 1s cubic-bezier(0.76,0,0.24,1)";
       curtain.style.transform = "translateY(-100%)";
-    }));
-    // safety: guarantee it ends lifted even if transitions are throttled
-    setTimeout(() => { curtain.style.transform = "translateY(-100%)"; }, 1100);
+    }, 2200);
+    // safety fallback
+    setTimeout(() => { curtain.style.transform = "translateY(-100%)"; }, 3400);
   }
 
   document.addEventListener("click", (ev) => {

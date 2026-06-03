@@ -276,9 +276,12 @@ function ProjectBreakdown() {
 function ProjectDetail() {
   const slug = (typeof window !== "undefined" && window.PROJECT_SLUG) || "";
   const p = PROJECTS.find(x => x.slug === slug) || PROJECTS[0];
+  const gallery = p.gallery || [p.img];
+  const [light, setLight] = uS3(null);
+
   return (
     <React.Fragment>
-      {/* Hero image */}
+      {/* ── Hero ── */}
       <section className="proj-detail-hero">
         <img src={p.img} alt={p.t} />
         <div className="proj-detail-hero-overlay">
@@ -289,7 +292,7 @@ function ProjectDetail() {
         </div>
       </section>
 
-      {/* Title + specs */}
+      {/* ── Title + specs ── */}
       <section className="section" id="proj-detail-intro">
         <div className="wrap proj-detail-grid">
           <div>
@@ -315,7 +318,62 @@ function ProjectDetail() {
         </div>
       </section>
 
-      {/* Other projects */}
+      {/* ── Challenge / Approach / Outcome ── */}
+      {(p.challenge || p.approach || p.outcome) && (
+        <section className="section proj-story-bg" id="proj-story">
+          <div className="wrap">
+            <div className="eyebrow reveal" style={{marginBottom:"clamp(32px,4vw,56px)"}}>The story</div>
+            <div className="proj-story-grid">
+              {p.challenge && (
+                <div className="proj-story-block reveal">
+                  <span className="proj-story-num">01</span>
+                  <h3 className="proj-story-h">The challenge</h3>
+                  <p className="proj-story-p">{p.challenge}</p>
+                </div>
+              )}
+              {p.approach && (
+                <div className="proj-story-block reveal d1">
+                  <span className="proj-story-num">02</span>
+                  <h3 className="proj-story-h">Our approach</h3>
+                  <p className="proj-story-p">{p.approach}</p>
+                </div>
+              )}
+              {p.outcome && (
+                <div className="proj-story-block reveal d2">
+                  <span className="proj-story-num">03</span>
+                  <h3 className="proj-story-h">The outcome</h3>
+                  <p className="proj-story-p">{p.outcome}</p>
+                </div>
+              )}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* ── Image gallery ── */}
+      {gallery.length > 1 && (
+        <section className="section" id="proj-gallery">
+          <div className="wrap">
+            <div className="eyebrow reveal" style={{marginBottom:"clamp(28px,4vw,48px)"}}>Photography</div>
+            <div className="proj-gallery-grid">
+              {gallery.map((src, i) => (
+                <button key={src+i} className={`proj-gallery-item reveal ${i ? "d"+(i%3) : ""} ${i===0?"span2":""}`}
+                  onClick={() => setLight(src)} style={{background:"none",border:"none",padding:0,cursor:"zoom-in"}}>
+                  <img src={src} alt={p.t + " — image " + (i+1)} loading="lazy" />
+                </button>
+              ))}
+            </div>
+          </div>
+          {light && (
+            <div className="proj-lightbox" onClick={() => setLight(null)}>
+              <button className="proj-lightbox-close" onClick={() => setLight(null)}>✕</button>
+              <img src={light} alt="Enlarged view" onClick={e => e.stopPropagation()} />
+            </div>
+          )}
+        </section>
+      )}
+
+      {/* ── More projects ── */}
       <section className="section proj-others-bg">
         <div className="wrap">
           <div className="eyebrow reveal" style={{marginBottom:"32px"}}>More projects</div>
