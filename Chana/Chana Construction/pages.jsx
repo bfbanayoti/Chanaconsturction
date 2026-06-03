@@ -22,16 +22,20 @@ function PageHero({ eyebrow, lines, intro }) {
 function CtaBand() {
   return (
     <section className="cta-band">
-      <div className="wrap cta-inner">
-        <div className="reveal">
-          <div className="eyebrow" style={{ marginBottom: "20px" }}>Start your project</div>
-          <h2>Let's build<br />something lasting.</h2>
-        </div>
-        <div className="reveal d1 cta-aside">
-          <p>Tell us about your plans. We'll arrange a relaxed, no-obligation consultation within one working day.</p>
-          <Magnetic strength={0.3}>
-            <a className="btn" data-pagelink href="Contact.html">Request a consultation <Arrow /></a>
-          </Magnetic>
+      <div className="wrap">
+        <div className="cta-glass">
+          <div className="cta-inner">
+            <div className="reveal">
+              <div className="eyebrow" style={{ marginBottom: "20px" }}>Start your project</div>
+              <h2>Let's build<br />something lasting.</h2>
+            </div>
+            <div className="reveal d1 cta-aside">
+              <p>Tell us about your plans. We'll arrange a relaxed, no-obligation consultation within one working day.</p>
+              <Magnetic strength={0.3}>
+                <a className="btn" data-pagelink href="Contact.html">Request a consultation <Arrow /></a>
+              </Magnetic>
+            </div>
+          </div>
         </div>
       </div>
     </section>
