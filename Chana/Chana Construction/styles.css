@@ -353,7 +353,7 @@ body.loaded .render-line { animation: lineSweep 2.7s cubic-bezier(0.65,0,0.35,1)
 @supports not (backdrop-filter: blur(1px)) {
   .cta-glass { background: oklch(0.97 0.008 78 / 0.92); }
 }
-.cta-inner { display: grid; grid-template-columns: 1.25fr 1fr; gap: clamp(32px, 6vw, 80px); align-items: end; }
+.cta-inner { display: grid; grid-template-columns: 1.25fr 1fr; gap: clamp(32px, 6vw, 80px); align-items: center; }
 .cta-band h2 { font-family: var(--serif); font-weight: 400; font-size: clamp(40px, 6vw, 94px); line-height: 0.92; letter-spacing: -0.02em; color: var(--ink); }
 .cta-band .eyebrow { color: var(--accent-deep); }
 .cta-band .eyebrow::before { background: var(--accent); }
