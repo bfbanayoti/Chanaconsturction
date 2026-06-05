@@ -139,7 +139,6 @@ function Contact() {
           <div className="contact-details reveal d2">
             <div className="cdetail"><span className="k">Call</span><span className="v">020 8000 0000</span></div>
             <div className="cdetail"><span className="k">Email</span><span className="v">hello@chanaconstruction.co.uk</span></div>
-            <div className="cdetail"><span className="k">Studio</span><span className="v">London</span></div>
           </div>
         </div>
 
