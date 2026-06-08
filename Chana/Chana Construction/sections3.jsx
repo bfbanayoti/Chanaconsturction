@@ -216,7 +216,7 @@ function Footer() {
           </div>
         </div>
         <div className="footer-base">
-          <span>© {new Date().getFullYear()} Chana Design Ltd. All rights reserved.</span>
+          <span>© {new Date().getFullYear()} Chana Design and Build Ltd. All rights reserved.</span>
           <span>Registered in England &amp; Wales · CHAS · Constructionline Gold</span>
         </div>
       </div>

@@ -7,9 +7,9 @@ const CURRENT = (typeof window !== "undefined" && window.PAGE) || "home";
 
 function Brand() {
   return (
-    <a className="brand" data-pagelink href={HOME} aria-label="Chana Design home">
+    <a className="brand" data-pagelink href={HOME} aria-label="Chana Design and Build home">
       <span className="brand-mark" />
-      <span className="brand-name"><b>Chana</b> <span>Construction</span></span>
+      <span className="brand-name"><b>Chana</b> <span>Design &amp; Build</span></span>
     </a>
   );
 }

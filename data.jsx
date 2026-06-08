@@ -1,7 +1,7 @@
 /* ============================================================
-   Content data for Chana Design
+   Content data for Chana Design and Build
    ============================================================ */
-const HOME = "Chana Design.html";
+const HOME = "Chana Design and Build.html";
 const NAV_LINKS = [
   { label: "Home", href: HOME, page: "home" },
   { label: "About", href: "About.html", page: "about" },

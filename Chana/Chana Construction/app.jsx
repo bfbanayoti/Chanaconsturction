@@ -134,7 +134,7 @@ function App() {
       <div className="curtain">
         <div className="curtain-inner">
           <span className="curtain-mark-dot" />
-          <span className="curtain-name"><b>Chana</b> <span>Construction</span></span>
+          <span className="curtain-name"><b>Chana</b> <span>Design &amp; Build</span></span>
         </div>
       </div>
 
