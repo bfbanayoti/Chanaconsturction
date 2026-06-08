@@ -138,7 +138,7 @@ function Contact() {
           </p>
           <div className="contact-details reveal d2">
             <div className="cdetail"><span className="k">Call</span><span className="v">020 8000 0000</span></div>
-            <div className="cdetail"><span className="k">Email</span><span className="v">hello@chanaconstruction.co.uk</span></div>
+            <div className="cdetail"><span className="k">Email</span><span className="v">hello@chanadesign.co.uk</span></div>
           </div>
         </div>
 
@@ -211,12 +211,12 @@ function Footer() {
           <div className="fcol">
             <h4>Get in touch</h4>
             <a data-pagelink href="Contact.html">020 8000 0000</a>
-            <a data-pagelink href="Contact.html">hello@chanaconstruction.co.uk</a>
+            <a data-pagelink href="Contact.html">hello@chanadesign.co.uk</a>
             <a data-pagelink href="Contact.html">Request a quote</a>
           </div>
         </div>
         <div className="footer-base">
-          <span>© {new Date().getFullYear()} Chana Construction Ltd. All rights reserved.</span>
+          <span>© {new Date().getFullYear()} Chana Design Ltd. All rights reserved.</span>
           <span>Registered in England &amp; Wales · CHAS · Constructionline Gold</span>
         </div>
       </div>

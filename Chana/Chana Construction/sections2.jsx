@@ -373,7 +373,7 @@ function About() {
         </h2>
         <div className="statement-side reveal d2">
           <p>
-            Chana Construction was founded on a simple principle: delivering exceptional
+            Chana Design was founded on a simple principle: delivering exceptional
             workmanship, honest value, and a level of client care too often missing from the industry —
             born from years of watching people let down by poor quality and silence after handover.
           </p>
@@ -553,7 +553,7 @@ function FounderStory() {
             overpromised and underdelivered — became a mission.
           </p>
           <p className="reveal d2">
-            We founded Chana Construction on a simple idea: that building someone's home is one of
+            We founded Chana Design on a simple idea: that building someone's home is one of
             the most significant things you can do for them, and it deserves to be treated that way.
             Every project we take on, we treat as if it were our own.
           </p>
