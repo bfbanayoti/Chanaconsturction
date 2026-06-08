@@ -9,7 +9,7 @@ function Brand() {
   return (
     <a className="brand" data-pagelink href={HOME} aria-label="Chana Design home">
       <span className="brand-mark" />
-      <span className="brand-name"><b>Chana</b> <span>Construction</span></span>
+      <span className="brand-name"><b>Chana</b> <span>Design</span></span>
     </a>
   );
 }
