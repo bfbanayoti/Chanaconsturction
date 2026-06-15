@@ -349,27 +349,47 @@ function ProjectDetail() {
         </section>
       )}
 
-      {/* ── Image gallery ── */}
+      {/* ── After gallery ── */}
       {gallery.length > 1 && (
         <section className="section" id="proj-gallery">
           <div className="wrap">
-            <div className="eyebrow reveal" style={{marginBottom:"clamp(28px,4vw,48px)"}}>Photography</div>
+            <div className="eyebrow reveal" style={{marginBottom:"8px"}}>After</div>
+            <h3 className="reveal d1" style={{fontFamily:"var(--serif)",fontSize:"clamp(24px,3vw,40px)",lineHeight:1.1,letterSpacing:"-0.02em",marginBottom:"clamp(28px,4vw,48px)"}}>The finished home.</h3>
             <div className="proj-gallery-grid">
               {gallery.map((src, i) => (
                 <button key={src+i} className={`proj-gallery-item reveal ${i ? "d"+(i%3) : ""} ${i===0?"span2":""}`}
                   onClick={() => setLight(src)} style={{background:"none",border:"none",padding:0,cursor:"zoom-in"}}>
-                  <img src={src} alt={p.t + " — image " + (i+1)} loading="lazy" />
+                  <img src={src} alt={p.t + " — after " + (i+1)} loading="lazy" />
                 </button>
               ))}
             </div>
           </div>
-          {light && (
-            <div className="proj-lightbox" onClick={() => setLight(null)}>
-              <button className="proj-lightbox-close" onClick={() => setLight(null)}>✕</button>
-              <img src={light} alt="Enlarged view" onClick={e => e.stopPropagation()} />
-            </div>
-          )}
         </section>
+      )}
+
+      {/* ── Before gallery ── */}
+      {p.before && p.before.length > 0 && (
+        <section className="section proj-story-bg" id="proj-before">
+          <div className="wrap">
+            <div className="eyebrow reveal" style={{marginBottom:"8px"}}>Before</div>
+            <h3 className="reveal d1" style={{fontFamily:"var(--serif)",fontSize:"clamp(24px,3vw,40px)",lineHeight:1.1,letterSpacing:"-0.02em",marginBottom:"clamp(28px,4vw,48px)"}}>Where we started.</h3>
+            <div className="proj-gallery-grid">
+              {p.before.map((src, i) => (
+                <button key={src+i} className={`proj-gallery-item reveal ${i ? "d"+(i%3) : ""} ${i===0?"span2":""}`}
+                  onClick={() => setLight(src)} style={{background:"none",border:"none",padding:0,cursor:"zoom-in"}}>
+                  <img src={src} alt={p.t + " — before " + (i+1)} loading="lazy" />
+                </button>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {light && (
+        <div className="proj-lightbox" onClick={() => setLight(null)}>
+          <button className="proj-lightbox-close" onClick={() => setLight(null)}>✕</button>
+          <img src={light} alt="Enlarged view" onClick={e => e.stopPropagation()} />
+        </div>
       )}
 
       {/* ── More projects ── */}

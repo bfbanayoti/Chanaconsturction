@@ -76,6 +76,13 @@ const PROJECTS = [
       "assets/chigwell-after-3.jpg",
       "assets/chigwell-after-4.jpg",
       "assets/chigwell-after-5.jpg",
+    ],
+    before: [
+      "assets/chigwell-before-1.jpg",
+      "assets/chigwell-before-2.jpg",
+      "assets/chigwell-before-3.jpg",
+      "assets/chigwell-before-4.jpg",
+      "assets/chigwell-before-5.jpg",
     ]
   },
   { t: "Hampstead House", s: "New build · 5 bed · NW3", tag: "New Build", cls: "tall", label: "HAMPSTEAD HOUSE",
