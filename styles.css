@@ -1058,8 +1058,8 @@ body:not(.loaded) .curtain {
 /* ============================================================
    PROJECT DETAIL PAGE
    ============================================================ */
-.proj-detail-hero { position: relative; overflow: hidden; }
-.proj-detail-hero img { width: 100%; height: auto; display: block; }
+.proj-detail-hero { position: relative; overflow: hidden; max-height: 80vh; }
+.proj-detail-hero img { width: 100%; height: 100%; object-fit: contain; display: block; background: #111; }
 .proj-detail-hero-overlay { position: absolute; inset: 0; background: linear-gradient(to bottom, oklch(0.18 0.01 60 / 0.45) 0%, transparent 40%); display: flex; align-items: flex-start; padding-top: 28px; }
 .proj-detail-hero-overlay .wrap { display: flex; align-items: center; gap: 16px; }
 .back-link { font-family: var(--mono); font-size: 12px; letter-spacing: .1em; text-transform: uppercase; color: var(--paper); display: inline-flex; align-items: center; gap: 8px; opacity: 0.85; transition: opacity .3s; }
