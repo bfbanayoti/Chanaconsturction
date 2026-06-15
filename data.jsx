@@ -60,6 +60,24 @@ const STATS = [
 ];
 
 const PROJECTS = [
+  { t: "Chigwell House", s: "New build · 5 bed · Essex", tag: "New Build", cls: "tall", label: "CHIGWELL HOUSE",
+    slug: "Chigwell-House",
+    img: "assets/chigwell-hero.jpg",
+    duration: "12 months", year: "2024",
+    brief: "A five-bedroom, five-bathroom new-build family home in Chigwell — 300 square metres of living space designed and delivered from groundwork to handover.",
+    challenge: "Delivering a 300sqm family home on a tight programme required careful coordination across every trade, from the structural frame through to the bespoke fitted wardrobes and bathroom suites. The client had a clear vision for the interiors and expected every detail to be executed exactly as specified.",
+    approach: "We managed the full build in-house — structure, fit-out, plumbing, electrics and interior joinery — with a single point of contact throughout. Bespoke wardrobes were designed for each bedroom, high-specification bathrooms were tiled in large-format stone effect porcelain, and the exterior was finished in traditional red brick with a block-paved driveway.",
+    outcome: "A 300sqm home handed over on programme. The clients moved in to a fully finished, furniture-ready house — from the crystal chandeliers in the master suite to the wall-hung sanitaryware in all five bathrooms. The exterior has become a landmark on the street.",
+    scope: ["New build construction", "Bespoke fitted joinery", "Bathroom design & fit-out", "Flooring & tiling", "Landscaping & driveway"],
+    gallery: [
+      "assets/chigwell-hero.jpg",
+      "assets/chigwell-after-1.jpg",
+      "assets/chigwell-after-2.jpg",
+      "assets/chigwell-after-3.jpg",
+      "assets/chigwell-after-4.jpg",
+      "assets/chigwell-after-5.jpg",
+    ]
+  },
   { t: "Hampstead House", s: "New build · 5 bed · NW3", tag: "New Build", cls: "tall", label: "HAMPSTEAD HOUSE",
     slug: "Hampstead-House",
     img: "assets/hampstead-house.jpg",
