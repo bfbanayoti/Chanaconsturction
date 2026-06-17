@@ -281,7 +281,7 @@ function ProjectDetail() {
   return (
     <React.Fragment>
       {/* ── Hero ── */}
-      <section className="proj-detail-hero">
+      <section className="proj-detail-hero" style={p.imgBg ? {background: p.imgBg} : {}}>
         <img src={p.img} alt={p.t} style={{objectFit: p.imgFit || "cover", objectPosition: p.imgPos || "center 20%"}} />
         <div className="proj-detail-hero-overlay">
           <div className="wrap">
