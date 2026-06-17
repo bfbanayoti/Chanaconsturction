@@ -1096,8 +1096,8 @@ body:not(.loaded) .curtain {
 .proj-detail-scope { grid-column: span 2; margin-top: 8px; padding-top: 20px; border-top: 1px solid var(--line); }
 .proj-detail-scope ul { list-style: none; display: flex; flex-direction: column; gap: 8px; margin-top: 12px; }
 .proj-detail-scope li { display: flex; align-items: center; gap: 10px; font-size: 14px; color: var(--ink-2); }
-.proj-others-bg { background: var(--paper-2); color: var(--ink); }
-.proj-others-bg .eyebrow { color: var(--accent); }
+.proj-others-bg { background: var(--ink); color: var(--paper); }
+.proj-others-bg .eyebrow { color: color-mix(in oklch, var(--accent) 60%, white); }
 .proj-others-bg .eyebrow::before { background: var(--accent); }
 .proj-others-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(14px, 1.8vw, 22px); }
 .proj-other { display: block; position: relative; overflow: hidden; border-radius: 5px; aspect-ratio: 4/3; border: 1px solid oklch(1 0 0 / 0.1); }
@@ -1187,13 +1187,11 @@ body:not(.loaded) .curtain {
    ============================================================ */
 .reveal {
   opacity: 0;
-  clip-path: inset(0 0 100% 0);
-  transform: translateY(10px);
-  transition: opacity .75s var(--ease), clip-path .75s var(--ease), transform .75s var(--ease);
+  transform: translateY(16px);
+  transition: opacity .6s var(--ease), transform .6s var(--ease);
 }
 .reveal.in {
   opacity: 1;
-  clip-path: inset(0 0 0% 0);
   transform: translateY(0);
 }
 .reveal.d1 { transition-delay: .08s; }
