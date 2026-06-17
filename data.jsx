@@ -63,7 +63,7 @@ const PROJECTS = [
   { t: "Chigwell — Chester Road", s: "New build · 5 bed · Essex", tag: "New Build", cls: "tall", label: "CHIGWELL — CHESTER ROAD",
     slug: "Chigwell-House",
     img: "assets/Chigwell - Chester Road - Hero.png",
-    imgPos: "center 40%",
+    imgContain: true,
     duration: "12 months", year: "2024",
     brief: "A five-bedroom, five-bathroom new-build family home in Chigwell — 300 square metres of living space designed and delivered from groundwork to handover.",
     challenge: "Delivering a 300sqm family home on a tight programme required careful coordination across every trade, from the structural frame through to the bespoke fitted wardrobes and bathroom suites. The client had a clear vision for the interiors and expected every detail to be executed exactly as specified.",
