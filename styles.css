@@ -1062,8 +1062,27 @@ body:not(.loaded) .curtain {
 .proj-detail-hero { position: relative; overflow: hidden; height: calc(60vh + 1cm); margin-top: 72px; }
 .proj-hero-blur { position: absolute; inset: 0; background-size: cover; background-position: center; filter: blur(24px) sepia(0.3) saturate(0.8); transform: scale(1.1); opacity: 0.6; z-index: 0; background-color: var(--paper); }
 .proj-detail-hero img { width: 100%; height: 100%; object-fit: cover; object-position: center 20%; display: block; }
-.proj-detail-hero-overlay { position: absolute; inset: 0; background: linear-gradient(to bottom, oklch(0.18 0.01 60 / 0.45) 0%, transparent 40%); display: flex; align-items: flex-start; padding-top: 28px; }
-.proj-detail-hero-overlay .wrap { display: flex; align-items: center; gap: 16px; }
+.proj-detail-hero-overlay { position: absolute; inset: 0; display: flex; align-items: flex-start; padding-top: 20px; }
+.proj-detail-hero-overlay .wrap { display: flex; align-items: center; gap: 10px; }
+.back-link, .proj-detail-hero-overlay .tag {
+  backdrop-filter: blur(20px) saturate(1.8);
+  -webkit-backdrop-filter: blur(20px) saturate(1.8);
+  background: linear-gradient(135deg, rgba(255,255,255,0.28) 0%, rgba(255,255,255,0.12) 100%);
+  border: 1px solid rgba(255,255,255,0.45);
+  border-bottom-color: rgba(255,255,255,0.15);
+  box-shadow: 0 2px 16px rgba(0,0,0,0.12), inset 0 1px 0 rgba(255,255,255,0.5);
+  border-radius: 100px;
+  padding: 8px 18px;
+  color: #fff !important;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 500;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
 .back-link { font-family: var(--mono); font-size: 12px; letter-spacing: .1em; text-transform: uppercase; color: var(--paper); display: inline-flex; align-items: center; gap: 8px; opacity: 0.85; transition: opacity .3s; }
 .back-link:hover { opacity: 1; }
 #proj-detail-intro { background: var(--paper); }
