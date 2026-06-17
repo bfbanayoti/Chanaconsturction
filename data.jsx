@@ -158,7 +158,7 @@ const PROJECTS = [
       "assets/Emerson Park - Nelmes Road - After 18.jpg",
     ]
   },
-  { t: "Hampstead House", s: "New build · 5 bed · NW3", tag: "New Build", cls: "tall", label: "HAMPSTEAD HOUSE",
+  { hidden: true, t: "Hampstead House", s: "New build · 5 bed · NW3", tag: "New Build", cls: "tall", label: "HAMPSTEAD HOUSE",
     slug: "Hampstead-House",
     img: "assets/hampstead-house.jpg",
     budget: "£1.85m", duration: "14 months", year: "2024",
@@ -176,7 +176,7 @@ const PROJECTS = [
       "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=900&q=80&auto=format&fit=crop",
     ]
   },
-  { t: "Islington Townhouse", s: "Refurbishment · Period home · N1", tag: "Refurbishment", cls: "wide", label: "ISLINGTON TOWNHOUSE",
+  { hidden: true, t: "Islington Townhouse", s: "Refurbishment · Period home · N1", tag: "Refurbishment", cls: "wide", label: "ISLINGTON TOWNHOUSE",
     slug: "Islington-Townhouse",
     img: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=900&q=85&auto=format&fit=crop",
     budget: "£420k", duration: "7 months", year: "2023",
@@ -194,7 +194,7 @@ const PROJECTS = [
       "https://images.unsplash.com/photo-1600210491369-e753d80a41f3?w=900&q=80&auto=format&fit=crop",
     ]
   },
-  { t: "Kensington Apartment", s: "Interior fit-out · 3 bed · W8", tag: "Interior", cls: "sqr", label: "KENSINGTON APARTMENT",
+  { hidden: true, t: "Kensington Apartment", s: "Interior fit-out · 3 bed · W8", tag: "Interior", cls: "sqr", label: "KENSINGTON APARTMENT",
     slug: "Kensington-Apartment",
     img: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=900&q=85&auto=format&fit=crop",
     budget: "£290k", duration: "5 months", year: "2024",
@@ -212,7 +212,7 @@ const PROJECTS = [
       "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=900&q=80&auto=format&fit=crop",
     ]
   },
-  { t: "Richmond Mews", s: "Development · 6 units · TW9", tag: "Development", cls: "full", label: "RICHMOND MEWS",
+  { hidden: true, t: "Richmond Mews", s: "Development · 6 units · TW9", tag: "Development", cls: "full", label: "RICHMOND MEWS",
     slug: "Richmond-Mews",
     img: "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=1200&q=85&auto=format&fit=crop",
     budget: "£2.1m", duration: "18 months", year: "2023",
@@ -262,4 +262,6 @@ const TRADES = [
   { cat: "Security & Technology", items: ["CCTV & alarm systems", "Access control", "AV & home cinema", "EV charging points", "Solar & renewables"] },
 ];
 
-Object.assign(window, { NAV_LINKS, ACCREDS, SERVICES, STATS, PROJECTS, STEPS, TESTIMONIALS, VALUES, TRADES });
+const PROJECTS_ALL = PROJECTS;
+const PROJECTS_VISIBLE = PROJECTS.filter(p => !p.hidden);
+Object.assign(window, { NAV_LINKS, ACCREDS, SERVICES, STATS, PROJECTS: PROJECTS_VISIBLE, PROJECTS_ALL, STEPS, TESTIMONIALS, VALUES, TRADES });
