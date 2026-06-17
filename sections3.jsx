@@ -30,8 +30,6 @@ function Projects() {
                 <span>{p.budget}</span>
                 <span className="sep">·</span>
                 <span>{p.duration}</span>
-                <span className="sep">·</span>
-                <span>{p.year}</span>
               </div>
             )}
             <a className="meta" data-pagelink href={p.slug ? p.slug + ".html" : "#"}>
@@ -253,7 +251,6 @@ function ProjectBreakdown() {
             <div className="pb-info">
               <div className="pb-stats">
                 <div className="pb-stat"><span className="k">Duration</span><span className="v">{p.duration}</span></div>
-                <div className="pb-stat"><span className="k">Completed</span><span className="v">{p.year}</span></div>
                 <div className="pb-stat"><span className="k">Type</span><span className="v">{p.tag}</span></div>
               </div>
               <p className="pb-brief">{p.brief}</p>
@@ -301,7 +298,7 @@ function ProjectDetail() {
             <a className="btn reveal d3" style={{display:"inline-flex", marginTop:"36px"}} data-pagelink href="Contact.html">Start a similar project <Arrow /></a>
           </div>
           <div className="proj-detail-stats reveal d1">
-            {[{k:"Duration",v:p.duration},{k:"Completed",v:p.year},{k:"Type",v:p.tag}].map(st => (
+            {[{k:"Duration",v:p.duration},{k:"Type",v:p.tag}].map(st => (
               <div className="pb-stat" key={st.k}>
                 <span className="k">{st.k}</span>
                 <span className="v">{st.v}</span>
