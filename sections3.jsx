@@ -284,7 +284,7 @@ function ProjectDetail() {
       <section className="proj-detail-hero">
         <div className="proj-hero-blur" style={{backgroundImage:`url(${p.img})`}} />
         <img src={p.img} alt={p.t} style={{objectFit: p.imgContain ? "contain" : "cover", objectPosition: p.imgPos || "center 20%", position:"relative", zIndex:1}} />
-        <div className="proj-detail-hero-overlay">
+        <div className="proj-detail-hero-overlay" style={{zIndex:2}}>
           <div className="wrap">
             <a className="back-link" data-pagelink href="Projects.html"><span>←</span> All projects</a>
             <span className="tag" style={{marginLeft:"auto"}}>{p.tag}</span>
