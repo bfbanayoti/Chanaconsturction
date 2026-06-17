@@ -281,8 +281,8 @@ function ProjectDetail() {
   return (
     <React.Fragment>
       {/* ── Hero ── */}
-      <section className="proj-detail-hero" style={p.imgNatural ? {height: "auto"} : {}}>
-        <img src={p.img} alt={p.t} style={p.imgNatural ? {width:"100%", height:"auto", objectFit:"unset"} : {objectFit: p.imgFit || "cover", objectPosition: p.imgPos || "center 20%"}} />
+      <section className="proj-detail-hero">
+        <img src={p.img} alt={p.t} style={{objectFit: "cover", objectPosition: p.imgPos || "center 20%"}} />
         <div className="proj-detail-hero-overlay">
           <div className="wrap">
             <a className="back-link" data-pagelink href="Projects.html"><span>←</span> All projects</a>
