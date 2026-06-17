@@ -374,8 +374,8 @@ function ProjectDetail() {
           <div className="wrap">
             <div className="eyebrow reveal" style={{marginBottom:"8px"}}>Drone footage</div>
             <h3 className="reveal d1" style={{fontFamily:"var(--serif)",fontSize:"clamp(24px,3vw,40px)",lineHeight:1.1,letterSpacing:"-0.02em",marginBottom:"clamp(28px,4vw,48px)"}}>See it from above.</h3>
-            <div className="reveal d1" style={{borderRadius:"12px",overflow:"hidden",lineHeight:0}}>
-              <video controls style={{width:"100%",display:"block",maxHeight:"70vh",background:"#111"}} playsInline>
+            <div className="reveal d1" style={{borderRadius:"12px",overflow:"hidden",lineHeight:0, display:"flex", justifyContent:"center", background:"#111"}}>
+              <video controls style={{display:"block", width: p.videoPortrait ? "auto" : "100%", maxWidth:"100%", maxHeight:"75vh"}} playsInline>
                 <source src={p.video} type="video/mp4" />
               </video>
             </div>

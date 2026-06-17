@@ -133,7 +133,7 @@ const PROJECTS = [
   { t: "Emerson Park — Nelmes Road", s: "Refurbishment · Emerson Park · Essex", tag: "Refurbishment", cls: "sqr", label: "EMERSON PARK — NELMES ROAD",
     slug: "Emerson-Park-Nelmes-Road",
     img: "assets/Emerson Park - Nelmes Road - After 1.jpg",
-    video: "assets/Nelmes Road.mp4",
+    video: "assets/Nelmes Road.mp4", videoPortrait: true,
     duration: "8 months", year: "2024",
     brief: "A full refurbishment of a substantial family home in Emerson Park — transformed from top to bottom with a luxury interior fit-out across all rooms.",
     challenge: "The property required a complete overhaul while the programme had to remain tightly managed to minimise disruption. Achieving a consistent high-end finish across 18 rooms of varying scale and function demanded careful material planning and trade sequencing.",
