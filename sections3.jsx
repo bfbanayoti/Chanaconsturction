@@ -282,7 +282,7 @@ function ProjectDetail() {
     <React.Fragment>
       {/* ── Hero ── */}
       <section className="proj-detail-hero">
-        <img src={p.img} alt={p.t} />
+        <img src={p.img} alt={p.t} style={p.imgPos ? {objectPosition: p.imgPos} : {}} />
         <div className="proj-detail-hero-overlay">
           <div className="wrap">
             <a className="back-link" data-pagelink href="Projects.html"><span>←</span> All projects</a>
