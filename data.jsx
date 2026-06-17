@@ -130,7 +130,7 @@ const PROJECTS = [
       "assets/Chigwell - Chester Road - Before 6.jpg",
     ]
   },
-  { t: "Emerson Park — Nelmes Road", s: "Refurbishment · Emerson Park · Essex", tag: "Refurbishment", cls: "sqr", label: "EMERSON PARK — NELMES ROAD",
+  { t: "Emerson Park — Nelmes Road", s: "New Build · Emerson Park · Essex", tag: "New Build", cls: "sqr", label: "EMERSON PARK — NELMES ROAD",
     slug: "Emerson-Park-Nelmes-Road",
     img: "assets/Emerson Park - Nelmes Road - After 1.jpg",
     video: "assets/Nelmes Road.mp4", videoPortrait: true,
