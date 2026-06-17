@@ -385,7 +385,7 @@ function ProjectDetail() {
 
       {/* ── Before gallery ── */}
       {p.before && p.before.length > 0 && (
-        <section className="section proj-story-bg" id="proj-before">
+        <section className="section" id="proj-before">
           <div className="wrap">
             <div className="eyebrow reveal" style={{marginBottom:"8px"}}>Before</div>
             <h3 className="reveal d1" style={{fontFamily:"var(--serif)",fontSize:"clamp(24px,3vw,40px)",lineHeight:1.1,letterSpacing:"-0.02em",marginBottom:"clamp(28px,4vw,48px)"}}>Where we started.</h3>
