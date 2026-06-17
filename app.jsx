@@ -101,6 +101,7 @@ function App() {
 
   uE(() => {
     const id = requestAnimationFrame(() => document.body.classList.add("loaded"));
+    document.body.classList.add(`page-${PAGE}`);
     setupPageTransitions();
     return () => cancelAnimationFrame(id);
   }, []);
