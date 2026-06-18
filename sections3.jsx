@@ -353,26 +353,28 @@ function ProjectDetail() {
             {p.before && p.before.length > 0 ? (
               <>
                 <h3 className="reveal d1" style={{fontFamily:"var(--serif)",fontSize:"clamp(24px,3vw,40px)",lineHeight:1.1,letterSpacing:"-0.02em",marginBottom:"clamp(28px,4vw,48px)"}}>Before &amp; after.</h3>
-                {/* Paired rows — before vs after side by side */}
-                <div className="proj-split-header">
-                  <div className="proj-split-label">Before</div>
-                  <div className="proj-split-label">After</div>
-                </div>
-                {p.before.map((bSrc, i) => (
-                  <div key={bSrc+i} className="proj-split-row reveal">
-                    <button className="proj-split-item col-before" onClick={() => setLight(bSrc)}>
-                      <img src={bSrc} alt={p.t + " — before " + (i+1)} loading="lazy" />
-                    </button>
-                    {gallery[i] ? (
-                      <button className="proj-split-item col-after" onClick={() => setLight(gallery[i])}>
-                        <img src={gallery[i]} alt={p.t + " — after " + (i+1)} loading="lazy" />
+                {/* Two columns — before left, matching afters right, then rest full-width */}
+                <div className="proj-split-grid">
+                  <div className="proj-split-col col-before">
+                    <div className="proj-split-label">Before</div>
+                    {p.before.map((src, i) => (
+                      <button key={src+i} className="proj-split-item reveal" onClick={() => setLight(src)}>
+                        <img src={src} alt={p.t + " — before " + (i+1)} />
                       </button>
-                    ) : <div className="proj-split-item col-after" />}
+                    ))}
                   </div>
-                ))}
+                  <div className="proj-split-col col-after">
+                    <div className="proj-split-label">After</div>
+                    {gallery.slice(0, p.before.length).map((src, i) => (
+                      <button key={src+i} className="proj-split-item reveal" onClick={() => setLight(src)}>
+                        <img src={src} alt={p.t + " — after " + (i+1)} />
+                      </button>
+                    ))}
+                  </div>
+                </div>
                 {/* Remaining after images full width */}
-                {gallery.slice(p.before.length).length > 0 && (
-                  <div className="proj-gallery-grid" style={{marginTop:"12px"}}>
+                {gallery.length > p.before.length && (
+                  <div className="proj-gallery-grid" style={{marginTop:"4px"}}>
                     {gallery.slice(p.before.length).map((src, i) => (
                       <button key={src+i} className={`proj-gallery-item reveal ${i===0?"span2":""}`}
                         onClick={() => setLight(src)} style={{background:"none",border:"none",padding:0,cursor:"zoom-in"}}>
