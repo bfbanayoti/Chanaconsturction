@@ -1137,6 +1137,22 @@ body:not(.loaded) .curtain {
    PROJECT DETAIL — GALLERY
    ============================================================ */
 #proj-gallery { background: var(--paper-2); }
+/* Before / After split columns */
+.proj-split-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  align-items: start;
+}
+.proj-split-col { display: flex; flex-direction: column; }
+.proj-split-images { display: flex; flex-direction: column; gap: 12px; }
+.proj-split-images .proj-gallery-item { border-radius: 6px; overflow: hidden; display: block; }
+.proj-split-images .proj-gallery-item img { width: 100%; height: auto; display: block; object-fit: cover; transition: transform 0.9s var(--ease); }
+.proj-split-images .proj-gallery-item:hover img { transform: scale(1.04); }
+@media (max-width: 640px) {
+  .proj-split-grid { grid-template-columns: 1fr; gap: 40px; }
+}
+
 .proj-gallery-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);

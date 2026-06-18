@@ -346,20 +346,52 @@ function ProjectDetail() {
         </section>
       )}
 
-      {/* ── After gallery ── */}
-      {gallery.length > 1 && (
+      {/* ── Before / After split ── */}
+      {(gallery.length > 1 || (p.before && p.before.length > 0)) && (
         <section className="section" id="proj-gallery">
           <div className="wrap">
-            <div className="eyebrow reveal" style={{marginBottom:"8px"}}>After</div>
-            <h3 className="reveal d1" style={{fontFamily:"var(--serif)",fontSize:"clamp(24px,3vw,40px)",lineHeight:1.1,letterSpacing:"-0.02em",marginBottom:"clamp(28px,4vw,48px)"}}>The finished home.</h3>
-            <div className="proj-gallery-grid">
-              {gallery.map((src, i) => (
-                <button key={src+i} className={`proj-gallery-item reveal ${i ? "d"+(i%3) : ""} ${i===0?"span2":""}`}
-                  onClick={() => setLight(src)} style={{background:"none",border:"none",padding:0,cursor:"zoom-in"}}>
-                  <img src={src} alt={p.t + " — after " + (i+1)} loading="lazy" />
-                </button>
-              ))}
-            </div>
+            {p.before && p.before.length > 0 ? (
+              <>
+                <h3 className="reveal d1" style={{fontFamily:"var(--serif)",fontSize:"clamp(24px,3vw,40px)",lineHeight:1.1,letterSpacing:"-0.02em",marginBottom:"clamp(28px,4vw,48px)"}}>Before &amp; after.</h3>
+                <div className="proj-split-grid">
+                  <div className="proj-split-col">
+                    <div className="eyebrow reveal" style={{marginBottom:"16px"}}>Before</div>
+                    <div className="proj-split-images">
+                      {p.before.map((src, i) => (
+                        <button key={src+i} className={`proj-gallery-item reveal ${i ? "d"+(i%3) : ""}`}
+                          onClick={() => setLight(src)} style={{background:"none",border:"none",padding:0,cursor:"zoom-in",display:"block",width:"100%",marginBottom:"12px"}}>
+                          <img src={src} alt={p.t + " — before " + (i+1)} loading="lazy" style={{width:"100%",height:"auto",display:"block",borderRadius:"6px"}} />
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+                  <div className="proj-split-col">
+                    <div className="eyebrow reveal" style={{marginBottom:"16px"}}>After</div>
+                    <div className="proj-split-images">
+                      {gallery.map((src, i) => (
+                        <button key={src+i} className={`proj-gallery-item reveal ${i ? "d"+(i%3) : ""}`}
+                          onClick={() => setLight(src)} style={{background:"none",border:"none",padding:0,cursor:"zoom-in",display:"block",width:"100%",marginBottom:"12px"}}>
+                          <img src={src} alt={p.t + " — after " + (i+1)} loading="lazy" style={{width:"100%",height:"auto",display:"block",borderRadius:"6px"}} />
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </>
+            ) : (
+              <>
+                <div className="eyebrow reveal" style={{marginBottom:"8px"}}>After</div>
+                <h3 className="reveal d1" style={{fontFamily:"var(--serif)",fontSize:"clamp(24px,3vw,40px)",lineHeight:1.1,letterSpacing:"-0.02em",marginBottom:"clamp(28px,4vw,48px)"}}>The finished home.</h3>
+                <div className="proj-gallery-grid">
+                  {gallery.map((src, i) => (
+                    <button key={src+i} className={`proj-gallery-item reveal ${i ? "d"+(i%3) : ""} ${i===0?"span2":""}`}
+                      onClick={() => setLight(src)} style={{background:"none",border:"none",padding:0,cursor:"zoom-in"}}>
+                      <img src={src} alt={p.t + " — after " + (i+1)} loading="lazy" />
+                    </button>
+                  ))}
+                </div>
+              </>
+            )}
           </div>
         </section>
       )}
@@ -374,24 +406,6 @@ function ProjectDetail() {
               <video controls style={{display:"block", width: p.videoPortrait ? "auto" : "100%", maxWidth:"100%", maxHeight:"75vh"}} playsInline>
                 <source src={p.video} type="video/mp4" />
               </video>
-            </div>
-          </div>
-        </section>
-      )}
-
-      {/* ── Before gallery ── */}
-      {p.before && p.before.length > 0 && (
-        <section className="section" id="proj-before">
-          <div className="wrap">
-            <div className="eyebrow reveal" style={{marginBottom:"8px"}}>Before</div>
-            <h3 className="reveal d1" style={{fontFamily:"var(--serif)",fontSize:"clamp(24px,3vw,40px)",lineHeight:1.1,letterSpacing:"-0.02em",marginBottom:"clamp(28px,4vw,48px)"}}>Where we started.</h3>
-            <div className="proj-gallery-grid">
-              {p.before.map((src, i) => (
-                <button key={src+i} className={`proj-gallery-item reveal ${i ? "d"+(i%3) : ""} ${i===0?"span2":""}`}
-                  onClick={() => setLight(src)} style={{background:"none",border:"none",padding:0,cursor:"zoom-in"}}>
-                  <img src={src} alt={p.t + " — before " + (i+1)} loading="lazy" />
-                </button>
-              ))}
             </div>
           </div>
         </section>
