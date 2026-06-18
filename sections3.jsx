@@ -346,58 +346,38 @@ function ProjectDetail() {
         </section>
       )}
 
-      {/* ── Before / After split ── */}
-      {(gallery.length > 1 || (p.before && p.before.length > 0)) && (
+      {/* ── After gallery ── */}
+      {gallery.length > 1 && (
         <section className="section" id="proj-gallery">
           <div className="wrap">
-            {p.before && p.before.length > 0 ? (
-              <>
-                <h3 className="reveal d1" style={{fontFamily:"var(--serif)",fontSize:"clamp(24px,3vw,40px)",lineHeight:1.1,letterSpacing:"-0.02em",marginBottom:"clamp(28px,4vw,48px)"}}>Before &amp; after.</h3>
-                {/* Two columns — before left, matching afters right, then rest full-width */}
-                <div className="proj-split-grid">
-                  <div className="proj-split-col col-before">
-                    <div className="proj-split-label">Before</div>
-                    {p.before.map((src, i) => (
-                      <button key={src+i} className="proj-split-item" onClick={() => setLight(src)}>
-                        <img src={src} alt={p.t + " — before " + (i+1)} />
-                      </button>
-                    ))}
-                  </div>
-                  <div className="proj-split-col col-after">
-                    <div className="proj-split-label">After</div>
-                    {gallery.slice(0, p.before.length).map((src, i) => (
-                      <button key={src+i} className="proj-split-item" onClick={() => setLight(src)}>
-                        <img src={src} alt={p.t + " — after " + (i+1)} />
-                      </button>
-                    ))}
-                  </div>
-                </div>
-                {/* Remaining after images full width */}
-                {gallery.length > p.before.length && (
-                  <div className="proj-gallery-grid" style={{marginTop:"4px"}}>
-                    {gallery.slice(p.before.length).map((src, i) => (
-                      <button key={src+i} className={`proj-gallery-item reveal ${i===0?"span2":""}`}
-                        onClick={() => setLight(src)} style={{background:"none",border:"none",padding:0,cursor:"zoom-in"}}>
-                        <img src={src} alt={p.t + " — after " + (p.before.length+i+1)} loading="lazy" />
-                      </button>
-                    ))}
-                  </div>
-                )}
-              </>
-            ) : (
-              <>
-                <div className="eyebrow reveal" style={{marginBottom:"8px"}}>After</div>
-                <h3 className="reveal d1" style={{fontFamily:"var(--serif)",fontSize:"clamp(24px,3vw,40px)",lineHeight:1.1,letterSpacing:"-0.02em",marginBottom:"clamp(28px,4vw,48px)"}}>The finished home.</h3>
-                <div className="proj-gallery-grid">
-                  {gallery.map((src, i) => (
-                    <button key={src+i} className={`proj-gallery-item reveal ${i ? "d"+(i%3) : ""} ${i===0?"span2":""}`}
-                      onClick={() => setLight(src)} style={{background:"none",border:"none",padding:0,cursor:"zoom-in"}}>
-                      <img src={src} alt={p.t + " — after " + (i+1)} loading="lazy" />
-                    </button>
-                  ))}
-                </div>
-              </>
-            )}
+            <div className="eyebrow reveal" style={{marginBottom:"8px"}}>After</div>
+            <h3 className="reveal d1" style={{fontFamily:"var(--serif)",fontSize:"clamp(24px,3vw,40px)",lineHeight:1.1,letterSpacing:"-0.02em",marginBottom:"clamp(28px,4vw,48px)"}}>The finished home.</h3>
+            <div className="proj-gallery-grid">
+              {gallery.map((src, i) => (
+                <button key={src+i} className={`proj-gallery-item reveal ${i ? "d"+(i%3) : ""} ${i===0?"span2":""}`}
+                  onClick={() => setLight(src)} style={{background:"none",border:"none",padding:0,cursor:"zoom-in"}}>
+                  <img src={src} alt={p.t + " — after " + (i+1)} loading="lazy" />
+                </button>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* ── Before gallery ── */}
+      {p.before && p.before.length > 0 && (
+        <section className="section" id="proj-before">
+          <div className="wrap">
+            <div className="eyebrow reveal" style={{marginBottom:"8px"}}>Before</div>
+            <h3 className="reveal d1" style={{fontFamily:"var(--serif)",fontSize:"clamp(24px,3vw,40px)",lineHeight:1.1,letterSpacing:"-0.02em",marginBottom:"clamp(28px,4vw,48px)"}}>Where we started.</h3>
+            <div className="proj-gallery-grid">
+              {p.before.map((src, i) => (
+                <button key={src+i} className={`proj-gallery-item reveal ${i ? "d"+(i%3) : ""} ${i===0?"span2":""}`}
+                  onClick={() => setLight(src)} style={{background:"none",border:"none",padding:0,cursor:"zoom-in"}}>
+                  <img src={src} alt={p.t + " — before " + (i+1)} loading="lazy" />
+                </button>
+              ))}
+            </div>
           </div>
         </section>
       )}
