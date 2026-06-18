@@ -358,7 +358,7 @@ function ProjectDetail() {
                   <div className="proj-split-col col-before">
                     <div className="proj-split-label">Before</div>
                     {p.before.map((src, i) => (
-                      <button key={src+i} className="proj-split-item reveal" onClick={() => setLight(src)}>
+                      <button key={src+i} className="proj-split-item" onClick={() => setLight(src)}>
                         <img src={src} alt={p.t + " — before " + (i+1)} />
                       </button>
                     ))}
@@ -366,7 +366,7 @@ function ProjectDetail() {
                   <div className="proj-split-col col-after">
                     <div className="proj-split-label">After</div>
                     {gallery.slice(0, p.before.length).map((src, i) => (
-                      <button key={src+i} className="proj-split-item reveal" onClick={() => setLight(src)}>
+                      <button key={src+i} className="proj-split-item" onClick={() => setLight(src)}>
                         <img src={src} alt={p.t + " — after " + (i+1)} />
                       </button>
                     ))}
