@@ -1146,9 +1146,9 @@ body:not(.loaded) .curtain {
 }
 .proj-split-col { display: flex; flex-direction: column; }
 .proj-split-images { display: flex; flex-direction: column; gap: 12px; }
-.proj-split-images .proj-gallery-item { border-radius: 6px; overflow: hidden; display: block; }
-.proj-split-images .proj-gallery-item img { width: 100%; height: auto; display: block; object-fit: cover; transition: transform 0.9s var(--ease); }
-.proj-split-images .proj-gallery-item:hover img { transform: scale(1.04); }
+.proj-split-item { background: none; border: none; padding: 0; cursor: zoom-in; display: block; width: 100%; border-radius: 6px; overflow: hidden; }
+.proj-split-item img { width: 100%; height: auto; display: block; transition: transform 0.9s var(--ease); }
+.proj-split-item:hover img { transform: scale(1.04); }
 @media (max-width: 640px) {
   .proj-split-grid { grid-template-columns: 1fr; gap: 40px; }
 }

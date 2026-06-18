@@ -358,9 +358,9 @@ function ProjectDetail() {
                     <div className="eyebrow reveal" style={{marginBottom:"16px"}}>Before</div>
                     <div className="proj-split-images">
                       {p.before.map((src, i) => (
-                        <button key={src+i} className={`proj-gallery-item reveal ${i ? "d"+(i%3) : ""}`}
-                          onClick={() => setLight(src)} style={{background:"none",border:"none",padding:0,cursor:"zoom-in",display:"block",width:"100%",marginBottom:"12px"}}>
-                          <img src={src} alt={p.t + " — before " + (i+1)} loading="lazy" style={{width:"100%",height:"auto",display:"block",borderRadius:"6px"}} />
+                        <button key={src+i} className={`proj-split-item reveal ${i ? "d"+(i%3) : ""}`}
+                          onClick={() => setLight(src)}>
+                          <img src={src} alt={p.t + " — before " + (i+1)} loading="lazy" />
                         </button>
                       ))}
                     </div>
@@ -369,9 +369,9 @@ function ProjectDetail() {
                     <div className="eyebrow reveal" style={{marginBottom:"16px"}}>After</div>
                     <div className="proj-split-images">
                       {gallery.map((src, i) => (
-                        <button key={src+i} className={`proj-gallery-item reveal ${i ? "d"+(i%3) : ""}`}
-                          onClick={() => setLight(src)} style={{background:"none",border:"none",padding:0,cursor:"zoom-in",display:"block",width:"100%",marginBottom:"12px"}}>
-                          <img src={src} alt={p.t + " — after " + (i+1)} loading="lazy" style={{width:"100%",height:"auto",display:"block",borderRadius:"6px"}} />
+                        <button key={src+i} className={`proj-split-item reveal ${i ? "d"+(i%3) : ""}`}
+                          onClick={() => setLight(src)}>
+                          <img src={src} alt={p.t + " — after " + (i+1)} loading="lazy" />
                         </button>
                       ))}
                     </div>
