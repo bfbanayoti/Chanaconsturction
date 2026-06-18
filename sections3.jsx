@@ -354,8 +354,8 @@ function ProjectDetail() {
               <>
                 <h3 className="reveal d1" style={{fontFamily:"var(--serif)",fontSize:"clamp(24px,3vw,40px)",lineHeight:1.1,letterSpacing:"-0.02em",marginBottom:"clamp(28px,4vw,48px)"}}>Before &amp; after.</h3>
                 <div className="proj-split-grid">
-                  <div className="proj-split-col">
-                    <div className="eyebrow reveal" style={{marginBottom:"16px"}}>Before</div>
+                  <div className="proj-split-col col-before">
+                    <div className="proj-split-label reveal">Before</div>
                     <div className="proj-split-images">
                       {p.before.map((src, i) => (
                         <button key={src+i} className={`proj-split-item reveal ${i ? "d"+(i%3) : ""}`}
@@ -365,8 +365,8 @@ function ProjectDetail() {
                       ))}
                     </div>
                   </div>
-                  <div className="proj-split-col">
-                    <div className="eyebrow reveal" style={{marginBottom:"16px"}}>After</div>
+                  <div className="proj-split-col col-after">
+                    <div className="proj-split-label reveal">After</div>
                     <div className="proj-split-images">
                       {gallery.map((src, i) => (
                         <button key={src+i} className={`proj-split-item reveal ${i ? "d"+(i%3) : ""}`}
