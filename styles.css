@@ -1150,16 +1150,17 @@ body:not(.loaded) .curtain {
   flex-direction: column;
   gap: 4px;
 }
-.proj-split-col.col-before { background: oklch(0.93 0.009 84); padding: 16px; gap: 8px; }
-.proj-split-col.col-after  { background: oklch(0.985 0.004 85); padding: 16px; gap: 8px; }
+.proj-split-col.col-before { gap: 0; border-top: 3px solid oklch(0.60 0.04 50); }
+.proj-split-col.col-after  { gap: 0; border-top: 3px solid var(--accent); }
 .proj-split-label {
   font-family: var(--mono);
   font-size: 11px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--ink-3);
-  padding-bottom: 8px;
+  padding: 12px 16px;
 }
+.col-before .proj-split-label { background: oklch(0.60 0.04 50); color: #fff; }
+.col-after  .proj-split-label { background: var(--accent); color: #fff; }
 .proj-split-item {
   background: none; border: none; padding: 0;
   cursor: zoom-in; display: block; width: 100%; overflow: hidden; border-radius: 4px;
