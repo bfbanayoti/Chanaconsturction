@@ -376,11 +376,18 @@ function ProjectDetail() {
       )}
 
       {/* ── Before gallery ── */}
-      {p.before && p.before.length > 0 && (
+      {(p.before && p.before.length > 0) && (
         <section className="section" id="proj-before">
           <div className="wrap">
             <div className="eyebrow reveal" style={{marginBottom:"8px"}}>Before</div>
             <h3 className="reveal d1" style={{fontFamily:"var(--serif)",fontSize:"clamp(24px,3vw,40px)",lineHeight:1.1,letterSpacing:"-0.02em",marginBottom:"clamp(28px,4vw,48px)"}}>Where we started.</h3>
+            {p.videoBefore && (
+              <div className="reveal d1" style={{borderRadius:"12px",overflow:"hidden",lineHeight:0,display:"flex",justifyContent:"center",background:p.videoPortrait?"transparent":"#111",marginBottom:"12px"}}>
+                <video controls style={{display:"block",width:p.videoPortrait?"auto":"100%",maxWidth:"100%",maxHeight:"75vh"}} playsInline>
+                  <source src={p.video} type="video/mp4" />
+                </video>
+              </div>
+            )}
             <div className="proj-gallery-grid">
               {p.before.map((src, i) => (
                 <button key={src+i} className={`proj-gallery-item reveal ${i ? "d"+(i%3) : ""} ${i===0?"span2":""}`}
@@ -393,8 +400,8 @@ function ProjectDetail() {
         </section>
       )}
 
-      {/* ── Video ── */}
-      {p.video && (
+      {/* ── Video (drone) — only if not used as before ── */}
+      {p.video && !p.videoBefore && (
         <section className="section proj-story-bg" id="proj-video">
           <div className="wrap">
             <div className="eyebrow reveal" style={{marginBottom:"8px"}}>Drone footage</div>
