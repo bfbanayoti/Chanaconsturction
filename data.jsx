@@ -141,6 +141,13 @@ const PROJECTS = [
     approach: "We stripped the property back and rebuilt the interior from scratch — new flooring, bathroom suites, kitchen, joinery and decoration throughout. A dedicated project manager was on site daily, coordinating trades and keeping the client updated at every stage.",
     outcome: "A fully transformed family home delivered on programme. The contrast between the before and after speaks for itself — every room finished to the same exacting standard, from the entrance hall through to the en-suite bathrooms.",
     scope: ["Full refurbishment", "Kitchen & bathroom fit-out", "Flooring & tiling", "Bespoke joinery", "Painting & decorating"],
+    before: [
+      "assets/Emerson Park - Nelmes Road - Before 1.jpg",
+      "assets/Emerson Park - Nelmes Road - Before 2.jpg",
+      "assets/Emerson Park - Nelmes Road - Before 3.jpg",
+      "assets/Emerson Park - Nelmes Road - Before 4.jpg",
+      "assets/Emerson Park - Nelmes Road - Before 5.jpg",
+    ],
     gallery: [
       "assets/Emerson Park - Nelmes Road - After 1.jpg",
       "assets/Emerson Park - Nelmes Road - After 2.jpg",
