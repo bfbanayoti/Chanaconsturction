@@ -21,20 +21,9 @@ function Projects() {
           <article className={`proj ${p.cls} reveal ${i ? "d" + i : ""}`} key={p.t}>
             <span className="tag">{p.tag}</span>
             <div className="proj-img">
-              {p.img ? (
-                p.before && p.before.length > 0 ? (
-                  <div className="proj-card-split">
-                    <div className="proj-card-half proj-card-before">
-                      <img src={p.before[0]} alt={p.label + " before"} loading="lazy" />
-                      <span className="proj-card-label">Before</span>
-                    </div>
-                    <div className="proj-card-half proj-card-after">
-                      <img src={p.img} alt={p.label} loading="lazy" />
-                      <span className="proj-card-label">After</span>
-                    </div>
-                  </div>
-                ) : <img src={p.img} alt={p.label} loading="lazy" />
-              ) : <Ph label={p.label} />}
+              {p.img
+                ? <img src={p.img} alt={p.label} loading="lazy" />
+                : <Ph label={p.label} />}
             </div>
             {p.budget && (
               <div className="proj-specs">
