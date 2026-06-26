@@ -369,13 +369,12 @@ function About() {
       <div className="eyebrow reveal" style={{ marginBottom: "34px" }}>Our philosophy</div>
       <div className="statement-grid">
         <h2 className="big-quote reveal d1">
-          We place our clients at the <em>centre</em> of everything we build.
+          We design and deliver solutions with our clients at the <em>core</em>.
         </h2>
         <div className="statement-side reveal d2">
           <p>
             Chana Design and Build was founded on a simple principle: delivering exceptional
-            workmanship, honest value, and a level of client care too often missing from the industry —
-            born from years of watching people let down by poor quality and silence after handover.
+            workmanship, honest value, and a level of client care too often missing from the industry.
           </p>
           <p>
             Whether you are building your forever home, undertaking a major refurbishment, or investing
@@ -438,8 +437,9 @@ function Services() {
             <h2 className="reveal d1">From land to lifelong aftercare.</h2>
           </div>
           <p className="lead reveal d2">
-            A true one-stop solution — from the first search for land through design, construction,
-            handover and lifelong aftercare. Hover any service to explore it.
+            An integrated turnkey solution guiding you from land acquisition and bespoke design
+            through construction, handover and dedicated lifetime aftercare. Hover over each service
+            to explore the details.
           </p>
         </div>
 
@@ -542,15 +542,15 @@ function FounderStory() {
     <section className="section founder-bg" id="founder">
       <div className="wrap founder-grid">
         <div className="founder-img reveal">
-          <img src="assets/hampstead-house.jpg" alt="Chana family" style={{ width:"100%", height:"100%", objectFit:"cover", borderRadius:"6px" }} />
+          <img src="assets/Emerson Park - Nelmes Road - After 1.jpg" alt="Chana family — Emerson Park games room" style={{ width:"100%", height:"100%", objectFit:"cover", borderRadius:"6px" }} />
         </div>
         <div className="founder-copy">
           <div className="eyebrow reveal" style={{ marginBottom:"28px" }}>Our story</div>
           <h2 className="reveal d1">Built on a family<br />tradition of craft.</h2>
           <p className="reveal d2">
             The Chana family has been surrounded by construction and craftsmanship for generations.
-            What began as a frustration — watching friends and family be let down by contractors who
-            overpromised and underdelivered — became a mission.
+            What began as frustration — watching friends and family constantly let down by rogue
+            contractors promising the world but unable to deliver — became a mission.
           </p>
           <p className="reveal d2">
             We founded Chana Design and Build on a simple idea: that building someone's home is one of
@@ -666,17 +666,14 @@ function AccredsBand() {
 }
 
 const MAP_PINS = [
-  { area: "Hampstead",    note: "NW3",           lat: 51.5560, lng: -0.1782 },
-  { area: "Islington",   note: "N1",            lat: 51.5362, lng: -0.1033 },
-  { area: "Kensington",  note: "W8",            lat: 51.5000, lng: -0.1919 },
-  { area: "Chelsea",     note: "SW3",           lat: 51.4875, lng: -0.1687 },
-  { area: "Richmond",    note: "TW9",           lat: 51.4613, lng: -0.3037 },
-  { area: "Notting Hill",note: "W11",           lat: 51.5138, lng: -0.2044 },
-  { area: "Mayfair",     note: "W1K",           lat: 51.5117, lng: -0.1489 },
-  { area: "Marylebone",  note: "W1U",           lat: 51.5194, lng: -0.1548 },
-  { area: "Fulham",      note: "SW6",           lat: 51.4751, lng: -0.1993 },
-  { area: "Greenwich",   note: "SE10",          lat: 51.4828, lng: -0.0098 },
-  { area: "Canary Wharf",note: "E14",           lat: 51.5054, lng: -0.0235 },
+  { area: "Chigwell",          note: "IG7",  lat: 51.6176, lng: 0.0758 },
+  { area: "Loughton",          note: "IG10", lat: 51.6469, lng: 0.0552 },
+  { area: "Buckhurst Hill",    note: "IG9",  lat: 51.6275, lng: 0.0470 },
+  { area: "Theydon Bois",      note: "CM16", lat: 51.6720, lng: 0.1037 },
+  { area: "Epping",            note: "CM16", lat: 51.6986, lng: 0.1110 },
+  { area: "Hornchurch",        note: "RM11", lat: 51.5563, lng: 0.2192 },
+  { area: "Stapleford Abbotts",note: "RM4",  lat: 51.6312, lng: 0.1640 },
+  { area: "Ongar",             note: "CM5",  lat: 51.7028, lng: 0.2453 },
 ];
 
 function WhereWeBuild() {
@@ -689,7 +686,7 @@ function WhereWeBuild() {
     const accent = getComputedStyle(document.documentElement).getPropertyValue("--accent").trim() || "#b05b36";
 
     const map = window.L.map(mapRef.current, {
-      center: [51.505, -0.13],
+      center: [51.645, 0.115],
       zoom: 11,
       zoomControl: false,
       scrollWheelZoom: false,
@@ -729,12 +726,12 @@ function WhereWeBuild() {
         <div className="sec-head">
           <div>
             <div className="eyebrow reveal">Where we build</div>
-            <h2 className="reveal d1">Across<br />London.</h2>
+            <h2 className="reveal d1">Across London<br />&amp; Essex.</h2>
           </div>
           <p className="lead reveal d2">
-            We work across London, from period townhouses in conservation areas
-            to new-build developments and multi-unit schemes. If you're unsure
-            whether we cover your area, just ask.
+            We work across London and Essex — from new-build developments and
+            multi-unit schemes to careful refurbishments and extensions. If you're
+            unsure whether we cover your area, just ask.
           </p>
         </div>
       </div>

@@ -10,15 +10,14 @@ const NAV_LINKS = [
 ];
 
 const ACCREDS = [
-  "CHAS Accredited", "Constructionline Gold", "ISO 9001", "NHBC Registered",
-  "Federation of Master Builders", "TrustMark Approved", "10-Year Structural Warranty", "Considerate Constructors",
+  "LABC", "NHBC", "10 Year Structural Warranty", "Considerate Constructors", "Federation of Master Builders",
 ];
 
 const SERVICES = [
   {
     name: "Land & Property Acquisition",
     cap: "Site sourcing",
-    desc: "We help clients identify and secure suitable land for new-build developments, as well as properties for refurbishment, extension, or redevelopment — with the right due diligence from day one.",
+    desc: "With careful due diligence from day one we help clients identify and secure suitable land for new build developments, as well as properties for refurbishment, extension and redevelopment.",
   },
   {
     name: "Planning & Development Consultancy",
@@ -64,7 +63,7 @@ const PROJECTS = [
     slug: "Chigwell-Brook-Way",
     img: "assets/Chigwell - Brook Way - Hero.png",
     video: "assets/Brookway Drone Video (1).mp4",
-    duration: "14 months", year: "2024",
+    duration: "12 months", year: "2024",
     brief: "A 4,500 sq ft six-bedroom, six-bathroom new-build family home in Chigwell — designed, planned and delivered turnkey from plot to handover.",
     challenge: "The project demanded a high level of finish across every room, with the client's brief calling for luxury materials, custom joinery and a cohesive interior scheme from ground floor to roof. Coordinating multiple specialist trades to a single quality standard required meticulous planning.",
     approach: "We assisted our client in finding the perfect plot and then helped design, obtain planning permission and build their dream home — managing every element in-house from the structural frame through to the final decoration.",
@@ -105,7 +104,7 @@ const PROJECTS = [
   { t: "Chigwell — Chester Road", s: "New Build · 5 bed · Chigwell · Essex", tag: "New Build", cls: "wide", label: "CHIGWELL — CHESTER ROAD",
     slug: "Chigwell-House",
     img: "assets/Chigwell - Chester Road - Hero.png",
-    imgContain: true,
+    imgContain: true, cardFull: true,
     duration: "12 months", year: "2024",
     brief: "A 3,000 sq ft five-bedroom, five-bathroom new-build family home in Chigwell — designed, planned and delivered turnkey from plot to handover.",
     challenge: "Delivering a 3,000 sq ft family home to an exacting specification required careful coordination across every trade, from the structural frame through to the bespoke fitted wardrobes and bathroom suites. The client had a clear vision for the interiors and expected every detail executed exactly as specified.",
@@ -134,8 +133,8 @@ const PROJECTS = [
     slug: "Emerson-Park-Nelmes-Road",
     img: "assets/Emerson Park - Nelmes Road - Hero.png",
     imgContain: true,
-    video: "assets/Nelmes Road.mp4", videoPortrait: true, videoBefore: true,
-    duration: "8 months", year: "2024",
+    video: "assets/Nelmes Road.mp4", videoPortrait: true,
+    duration: "16 months", year: "2024",
     brief: "An 11,000 sq ft eight-bedroom, eleven-bathroom new-build in Emerson Park, Hornchurch — designed, planned and delivered turnkey from plot to handover.",
     challenge: "Delivering a home of this scale to the highest specification demanded exceptional coordination across dozens of specialist trades simultaneously. Every decision — from the structural system to the finest interior detail — had to be managed to a single consistent standard across 11,000 sq ft of living space.",
     approach: "We assisted our client in finding the perfect plot and then helped design, obtain planning permission and build their dream home — overseeing every stage in-house from groundworks through to the finished interior.",

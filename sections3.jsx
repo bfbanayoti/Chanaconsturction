@@ -9,7 +9,7 @@ function Projects() {
       <div className="wrap"><div className="sec-head">
         <div>
           <div className="eyebrow reveal">Portfolio</div>
-          <h2 className="reveal d1">A closer look.</h2>
+          <h2 className="reveal d1">Take a closer look:</h2>
         </div>
         <p className="lead reveal d2">
           New builds, careful refurbishments and multi-unit developments across the South East —
@@ -21,9 +21,14 @@ function Projects() {
           <article className={`proj ${p.cls} reveal ${i ? "d" + i : ""}`} key={p.t}>
             <span className="tag">{p.tag}</span>
             <div className="proj-img">
-              {p.img
-                ? <img src={p.img} alt={p.label} loading="lazy" />
-                : <Ph label={p.label} />}
+              {p.img ? (
+                p.cardFull ? (
+                  <>
+                    <div className="proj-img-blur" style={{backgroundImage:`url(${p.img})`}} />
+                    <img src={p.img} alt={p.label} loading="lazy" style={{objectFit:"contain",position:"relative",zIndex:1}} />
+                  </>
+                ) : <img src={p.img} alt={p.label} loading="lazy" />
+              ) : <Ph label={p.label} />}
             </div>
             {p.budget && (
               <div className="proj-specs">
@@ -135,8 +140,7 @@ function Contact() {
             relaxed, no-obligation consultation.
           </p>
           <div className="contact-details reveal d2">
-            <div className="cdetail"><span className="k">Call</span><span className="v">020 8000 0000</span></div>
-            <div className="cdetail"><span className="k">Email</span><span className="v">hello@chanadesign.co.uk</span></div>
+            <div className="cdetail"><span className="k">Email</span><span className="v">info@chanadesignandconstruction.co.uk</span></div>
           </div>
         </div>
 
@@ -208,8 +212,7 @@ function Footer() {
           </div>
           <div className="fcol">
             <h4>Get in touch</h4>
-            <a data-pagelink href="Contact.html">020 8000 0000</a>
-            <a data-pagelink href="Contact.html">hello@chanadesign.co.uk</a>
+            <a href="mailto:info@chanadesignandconstruction.co.uk">info@chanadesignandconstruction.co.uk</a>
             <a data-pagelink href="Contact.html">Request a quote</a>
           </div>
         </div>
