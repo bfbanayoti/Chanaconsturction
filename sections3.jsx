@@ -140,7 +140,7 @@ function Contact() {
             relaxed, no-obligation consultation.
           </p>
           <div className="contact-details reveal d2">
-            <div className="cdetail"><span className="k">Email</span><span className="v">info@chanadesignandconstruction.co.uk</span></div>
+            <div className="cdetail"><span className="k">Email</span><span className="v">info@chanadesignandbuild.co.uk</span></div>
           </div>
         </div>
 
@@ -212,7 +212,7 @@ function Footer() {
           </div>
           <div className="fcol">
             <h4>Get in touch</h4>
-            <a href="mailto:info@chanadesignandconstruction.co.uk">info@chanadesignandconstruction.co.uk</a>
+            <a href="mailto:info@chanadesignandbuild.co.uk">info@chanadesignandbuild.co.uk</a>
             <a data-pagelink href="Contact.html">Request a quote</a>
           </div>
         </div>
