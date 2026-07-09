@@ -53,12 +53,14 @@ function setupPageTransitions() {
     // ENTER: curtain covers on load, shows brand animation, then lifts away
     curtain.style.transform = "translateY(0)";
     curtain.style.transition = "none";
+    document.body.style.overflow = "hidden";
     setTimeout(() => {
       curtain.style.transition = "transform 1s cubic-bezier(0.76,0,0.24,1)";
       curtain.style.transform = "translateY(-100%)";
+      setTimeout(() => { document.body.style.overflow = ""; }, 1000);
     }, 2200);
     // safety fallback
-    setTimeout(() => { curtain.style.transform = "translateY(-100%)"; }, 3400);
+    setTimeout(() => { curtain.style.transform = "translateY(-100%)"; document.body.style.overflow = ""; }, 3400);
   }
 
   document.addEventListener("click", (ev) => {

@@ -10,15 +10,14 @@ const NAV_LINKS = [
 ];
 
 const ACCREDS = [
-  "CHAS Accredited", "Constructionline Gold", "ISO 9001", "NHBC Registered",
-  "Federation of Master Builders", "TrustMark Approved", "10-Year Structural Warranty", "Considerate Constructors",
+  "LABC", "NHBC", "10 Year Structural Warranty", "Considerate Constructors", "Federation of Master Builders",
 ];
 
 const SERVICES = [
   {
     name: "Land & Property Acquisition",
     cap: "Site sourcing",
-    desc: "We help clients identify and secure suitable land for new-build developments, as well as properties for refurbishment, extension, or redevelopment — with the right due diligence from day one.",
+    desc: "With careful due diligence from day one we help clients identify and secure suitable land for new build developments, as well as properties for refurbishment, extension and redevelopment.",
   },
   {
     name: "Planning & Development Consultancy",
@@ -60,7 +59,151 @@ const STATS = [
 ];
 
 const PROJECTS = [
-  { t: "Hampstead House", s: "New build · 5 bed · NW3", tag: "New Build", cls: "tall", label: "HAMPSTEAD HOUSE",
+  { t: "Chigwell — Brook Way", s: "New Build · 6 bed · Chigwell · Essex", tag: "New Build", cls: "tall", label: "CHIGWELL — BROOK WAY",
+    slug: "Chigwell-Brook-Way",
+    img: "assets/Chigwell - Brook Way - Hero.png",
+    video: "assets/Brookway Drone Video (1).mp4",
+    duration: "12 months", year: "2024",
+    brief: "A 4,500 sq ft six-bedroom, six-bathroom new-build family home in Chigwell — designed, planned and delivered turnkey from plot to handover.",
+    challenge: "The project demanded a high level of finish across every room, with the client's brief calling for luxury materials, custom joinery and a cohesive interior scheme from ground floor to roof. Coordinating multiple specialist trades to a single quality standard required meticulous planning.",
+    approach: "We assisted our client in finding the perfect plot and then helped design, obtain planning permission and build their dream home — managing every element in-house from the structural frame through to the final decoration.",
+    outcome: "A beautifully finished 4,500 sq ft home handed over on time, backed by a 10-year LABC warranty. Every room delivered to the client's specification, with bespoke fitted furniture, premium tiling and a refined finish that has set a new benchmark for the street.",
+    scope: ["Plot sourcing & acquisition", "Design & planning", "New build construction", "Bespoke joinery", "Bathroom fit-out", "10-year LABC warranty"],
+    gallery: [
+      "assets/Chigwell - Brook Way - Hero.png",
+      "assets/Chigwell - Brook Way - After 1.jpg",
+      "assets/Chigwell - Brook Way - After 2.jpg",
+      "assets/Chigwell - Brook Way - After 3.jpg",
+      "assets/Chigwell - Brook Way - After 4.jpg",
+      "assets/Chigwell - Brook Way - After 5.jpg",
+      "assets/Chigwell - Brook Way - After 6.jpg",
+      "assets/Chigwell - Brook Way - After 7.jpg",
+      "assets/Chigwell - Brook Way - After 8.jpg",
+      "assets/Chigwell - Brook Way - After 9.jpg",
+      "assets/Chigwell - Brook Way - After 10.jpg",
+      "assets/Chigwell - Brook Way - After 11.jpg",
+      "assets/Chigwell - Brook Way - After 12.jpg",
+      "assets/Chigwell - Brook Way - After 13.jpg",
+      "assets/Chigwell - Brook Way - After 14.jpg",
+      "assets/Chigwell - Brook Way - After 15.jpg",
+      "assets/Chigwell - Brook Way - After 16.jpg",
+      "assets/Chigwell - Brook Way - After 17.jpg",
+      "assets/Chigwell - Brook Way - After 18.jpg",
+      "assets/Chigwell - Brook Way - After 19.jpg",
+      "assets/Chigwell - Brook Way - After 20.jpg",
+    ],
+    before: [
+      "assets/Chigwell - Brook Way - Before 1.jpg",
+      "assets/Chigwell - Brook Way - Before 2.jpg",
+      "assets/Chigwell - Brook Way - Before 3.jpg",
+      "assets/Chigwell - Brook Way - Before 4.jpg",
+      "assets/Chigwell - Brook Way - Before 5.jpg",
+      "assets/Chigwell - Brook Way - Before 6.jpg",
+    ]
+  },
+  { t: "Chigwell — Chester Road", s: "New Build · 5 bed · Chigwell · Essex", tag: "New Build", cls: "wide", label: "CHIGWELL — CHESTER ROAD",
+    slug: "Chigwell-House",
+    img: "assets/Chigwell - Chester Road - Hero.png",
+    imgContain: true, cardFull: true,
+    duration: "12 months", year: "2024",
+    brief: "A 3,000 sq ft five-bedroom, five-bathroom new-build family home in Chigwell — designed, planned and delivered turnkey from plot to handover.",
+    challenge: "Delivering a 3,000 sq ft family home to an exacting specification required careful coordination across every trade, from the structural frame through to the bespoke fitted wardrobes and bathroom suites. The client had a clear vision for the interiors and expected every detail executed exactly as specified.",
+    approach: "We assisted our client in finding the perfect plot and then helped design, obtain planning permission and build their dream home — managing structure, fit-out, plumbing, electrics and interior joinery with a single point of contact throughout.",
+    outcome: "A 3,000 sq ft home handed over on programme, backed by a 10-year NHBC warranty. The clients moved in to a fully finished, furniture-ready house — from the master suite through to the wall-hung sanitaryware in all five bathrooms.",
+    scope: ["Plot sourcing & acquisition", "Design & planning", "New build construction", "Bespoke fitted joinery", "Bathroom design & fit-out", "10-year NHBC warranty"],
+    gallery: [
+      "assets/Chigwell - Chester Road - Hero.png",
+      "assets/Chigwell - Chester Road - After 1.jpg",
+      "assets/Chigwell - Chester Road - After 2.jpg",
+      "assets/Chigwell - Chester Road - After 3.jpg",
+      "assets/Chigwell - Chester Road - After 4.jpg",
+      "assets/Chigwell - Chester Road - After 5.jpg",
+      "assets/Chigwell - Chester Road - After 6.jpg",
+    ],
+    before: [
+      "assets/Chigwell - Chester Road - Before 1.jpg",
+      "assets/Chigwell - Chester Road - Before 2.jpg",
+      "assets/Chigwell - Chester Road - Before 3.jpg",
+      "assets/Chigwell - Chester Road - Before 4.jpg",
+      "assets/Chigwell - Chester Road - Before 5.jpg",
+      "assets/Chigwell - Chester Road - Before 6.jpg",
+    ]
+  },
+  { t: "Emerson Park — Nelmes Road", s: "New Build · 8 bed · Emerson Park · London", tag: "New Build", cls: "sqr", label: "EMERSON PARK — NELMES ROAD",
+    slug: "Emerson-Park-Nelmes-Road",
+    img: "assets/Emerson Park - Nelmes Road - Hero.png",
+    imgContain: true,
+    video: "assets/Nelmes Road.mp4", videoPortrait: true,
+    duration: "16 months", year: "2024",
+    brief: "An 11,000 sq ft eight-bedroom, eleven-bathroom new-build in Emerson Park, Hornchurch — designed, planned and delivered turnkey from plot to handover.",
+    challenge: "Delivering a home of this scale to the highest specification demanded exceptional coordination across dozens of specialist trades simultaneously. Every decision — from the structural system to the finest interior detail — had to be managed to a single consistent standard across 11,000 sq ft of living space.",
+    approach: "We assisted our client in finding the perfect plot and then helped design, obtain planning permission and build their dream home — overseeing every stage in-house from groundworks through to the finished interior.",
+    outcome: "An 11,000 sq ft landmark home handed over on programme, backed by a 10-year Build Zone warranty. A turnkey delivery — the client moved into a fully finished, furniture-ready residence from day one.",
+    scope: ["Plot sourcing & acquisition", "Design & planning", "New build construction", "Bespoke joinery & fit-out", "Bathroom & kitchen design", "10-year Build Zone warranty"],
+    before: [
+      "assets/Emerson Park - Nelmes Road - Before 1.jpg",
+      "assets/Emerson Park - Nelmes Road - Before 2.jpg",
+      "assets/Emerson Park - Nelmes Road - Before 3.jpg",
+      "assets/Emerson Park - Nelmes Road - Before 4.jpg",
+      "assets/Emerson Park - Nelmes Road - Before 5.jpg",
+    ],
+    gallery: [
+      "assets/Emerson Park - Nelmes Road - After 1.jpg",
+      "assets/Emerson Park - Nelmes Road - After 2.jpg",
+      "assets/Emerson Park - Nelmes Road - After 3.jpg",
+      "assets/Emerson Park - Nelmes Road - After 4.jpg",
+      "assets/Emerson Park - Nelmes Road - After 5.jpg",
+      "assets/Emerson Park - Nelmes Road - After 6.jpg",
+      "assets/Emerson Park - Nelmes Road - After 7.jpg",
+      "assets/Emerson Park - Nelmes Road - After 8.jpg",
+      "assets/Emerson Park - Nelmes Road - After 9.jpg",
+      "assets/Emerson Park - Nelmes Road - After 10.jpg",
+      "assets/Emerson Park - Nelmes Road - After 11.jpg",
+      "assets/Emerson Park - Nelmes Road - After 12.jpg",
+      "assets/Emerson Park - Nelmes Road - After 13.jpg",
+      "assets/Emerson Park - Nelmes Road - After 14.jpg",
+      "assets/Emerson Park - Nelmes Road - After 15.jpg",
+      "assets/Emerson Park - Nelmes Road - After 16.jpg",
+      "assets/Emerson Park - Nelmes Road - After 17.jpg",
+      "assets/Emerson Park - Nelmes Road - After 18.jpg",
+    ]
+  },
+  { t: "Emerson Park — Sylvan Avenue", s: "Refurbishment · Emerson Park · London", tag: "Refurbishment", cls: "wide", label: "EMERSON PARK — SYLVAN AVENUE",
+    slug: "Emerson-Park-Sylvan-Avenue",
+    img: "assets/EP/Sylvan - Hero.jpg",
+    duration: "8–9 months", year: "2026",
+    brief: "A full refurbishment back to brick of a substantial family home on Sylvan Avenue, Emerson Park — including a single-storey extension, balcony formation, and the construction of an outdoor swimming pool and outbuilding. Six bedrooms, eight bathrooms across 600 sq m. A turnkey project.",
+    approach: "We helped our client source the original house and then designed the scheme and obtained planning approval using our in-house architects and structural engineers — carrying the project from acquisition through design and planning to construction under one roof.",
+    scope: ["Full refurbishment back to brick", "Single-storey extension", "Balcony formation", "Outdoor swimming pool", "Outbuilding construction", "Architectural & structural design"],
+    video: "assets/EP/Sylvan - Walkthrough.mp4", videoPortrait: true,
+    videoEyebrow: "Walkthrough", videoHeading: "Inside the build.",
+    gallery: [
+      "assets/EP/Sylvan - Hero.jpg",
+      "assets/EP/Sylvan - After 1.jpg",
+      "assets/EP/Sylvan - After 2.jpg",
+      "assets/EP/Sylvan - After 3.jpg",
+      "assets/EP/Sylvan - After 4.jpg",
+      "assets/EP/Sylvan - After 5.jpg",
+      "assets/EP/Sylvan - After 6.jpg",
+    ],
+    before: [
+      "assets/EP/Sylvan - Before 1.jpg",
+      "assets/EP/Sylvan - Before 2.jpg",
+      "assets/EP/Sylvan - Before 3.jpg",
+      "assets/EP/Sylvan - Before 4.jpg",
+      "assets/EP/Sylvan - Before 5.jpg",
+      "assets/EP/Sylvan - Before 6.jpg",
+      "assets/EP/Sylvan - Before 7.jpg",
+      "assets/EP/Sylvan - Before 8.jpg",
+      "assets/EP/Sylvan - Before 9.jpg",
+      "assets/EP/Sylvan - Before 10.jpg",
+      "assets/EP/Sylvan - Before 11.jpg",
+      "assets/EP/Sylvan - Before 12.jpg",
+      "assets/EP/Sylvan - Before 13.jpg",
+      "assets/EP/Sylvan - Before 14.jpg",
+    ],
+  },
+  { hidden: true, t: "Hampstead House", s: "New build · 5 bed · NW3", tag: "New Build", cls: "tall", label: "HAMPSTEAD HOUSE",
     slug: "Hampstead-House",
     img: "assets/hampstead-house.jpg",
     budget: "£1.85m", duration: "14 months", year: "2024",
@@ -78,7 +221,7 @@ const PROJECTS = [
       "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=900&q=80&auto=format&fit=crop",
     ]
   },
-  { t: "Islington Townhouse", s: "Refurbishment · Period home · N1", tag: "Refurbishment", cls: "wide", label: "ISLINGTON TOWNHOUSE",
+  { hidden: true, t: "Islington Townhouse", s: "Refurbishment · Period home · N1", tag: "Refurbishment", cls: "wide", label: "ISLINGTON TOWNHOUSE",
     slug: "Islington-Townhouse",
     img: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=900&q=85&auto=format&fit=crop",
     budget: "£420k", duration: "7 months", year: "2023",
@@ -96,7 +239,7 @@ const PROJECTS = [
       "https://images.unsplash.com/photo-1600210491369-e753d80a41f3?w=900&q=80&auto=format&fit=crop",
     ]
   },
-  { t: "Kensington Apartment", s: "Interior fit-out · 3 bed · W8", tag: "Interior", cls: "sqr", label: "KENSINGTON APARTMENT",
+  { hidden: true, t: "Kensington Apartment", s: "Interior fit-out · 3 bed · W8", tag: "Interior", cls: "sqr", label: "KENSINGTON APARTMENT",
     slug: "Kensington-Apartment",
     img: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=900&q=85&auto=format&fit=crop",
     budget: "£290k", duration: "5 months", year: "2024",
@@ -114,7 +257,7 @@ const PROJECTS = [
       "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=900&q=80&auto=format&fit=crop",
     ]
   },
-  { t: "Richmond Mews", s: "Development · 6 units · TW9", tag: "Development", cls: "full", label: "RICHMOND MEWS",
+  { hidden: true, t: "Richmond Mews", s: "Development · 6 units · TW9", tag: "Development", cls: "full", label: "RICHMOND MEWS",
     slug: "Richmond-Mews",
     img: "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=1200&q=85&auto=format&fit=crop",
     budget: "£2.1m", duration: "18 months", year: "2023",
@@ -143,9 +286,9 @@ const STEPS = [
 ];
 
 const TESTIMONIALS = [
-  { q: "They treated our home like their own. Communication was constant and the finish is genuinely flawless.", nm: "Sarah & James Whitmore", rl: "New build · Hampstead", stars: 5 },
-  { q: "After being let down before, Chana restored our faith. Transparent costs, no surprises, and real aftercare.", nm: "Daniel Osei", rl: "Developer · East London", stars: 5 },
-  { q: "From planning headaches to the final handover, they guided us calmly through the whole journey.", nm: "Priya & Arun Mehta", rl: "Refurbishment · Islington", stars: 5 },
+  { q: "Chana Design and Build were exceptional from the very beginning. We initially found it challenging to secure the right plot for our project, but their team took that burden off our shoulders by liaising directly with estate agents, negotiating on our behalf, and assisting throughout the acquisition process. Once the plot was secured, they designed a bespoke home tailored perfectly to our requirements and delivered a build of outstanding quality. Hardeep was professional, attentive, and supportive throughout the entire journey, consistently going above and beyond our expectations. The project was completed on time, within budget, and to an exceptional standard. We would highly recommend Chana Design and Build to anyone looking for a trustworthy and experienced construction company.", nm: "Manickavagam Sritharan", rl: "New Build · Turnkey", stars: 5 },
+  { q: "Finding the perfect location for your dream home can be a daunting experience, but Hardeep and the team at Chana Design and Build made the entire process seamless and stress-free. They helped us identify and secure the ideal plot before designing our home through their in-house architectural team. Having access to their in-house architects, structural engineers, and party wall specialists made the design, planning, and approval stages incredibly efficient. Throughout the project, the team demonstrated exceptional knowledge, professionalism, and honesty, always providing practical advice and guidance when needed. Their attention to detail, transparent communication, and commitment to delivering the best possible outcome gave us complete confidence from start to finish. I cannot recommend Chana Design and Build highly enough.", nm: "Mark Preston", rl: "New Build · Turnkey", stars: 5 },
+  { q: "We are currently working with Chana Design and Build on a substantial refurbishment project at our 6,000 sq ft property in Emerson Park, Hornchurch, which includes the installation of an outdoor swimming pool. Having been recommended to us by a friend whose new-build project they successfully completed, our expectations were already high. However, the team has exceeded them in every respect. Their efficiency, meticulous workmanship, and excellent communication have been outstanding throughout the project. A project of this scale can often be stressful, but Chana Design and Build have made the entire experience enjoyable and rewarding. Remarkably, the project is currently ahead of schedule — something rarely seen in the construction industry. We would not hesitate to use them again and wholeheartedly recommend them to anyone considering a construction or refurbishment project.", nm: "Thanalingam Iyinkaran", rl: "Refurbishment · Emerson Park", stars: 5 },
 ];
 
 const VALUES = [
@@ -164,4 +307,6 @@ const TRADES = [
   { cat: "Security & Technology", items: ["CCTV & alarm systems", "Access control", "AV & home cinema", "EV charging points", "Solar & renewables"] },
 ];
 
-Object.assign(window, { NAV_LINKS, ACCREDS, SERVICES, STATS, PROJECTS, STEPS, TESTIMONIALS, VALUES, TRADES });
+const PROJECTS_ALL = PROJECTS;
+const PROJECTS_VISIBLE = PROJECTS.filter(p => !p.hidden);
+Object.assign(window, { NAV_LINKS, ACCREDS, SERVICES, STATS, PROJECTS: PROJECTS_VISIBLE, PROJECTS_ALL, STEPS, TESTIMONIALS, VALUES, TRADES });

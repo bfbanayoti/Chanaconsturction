@@ -9,7 +9,7 @@ function Projects() {
       <div className="wrap"><div className="sec-head">
         <div>
           <div className="eyebrow reveal">Portfolio</div>
-          <h2 className="reveal d1">A closer look.</h2>
+          <h2 className="reveal d1">Take a closer look:</h2>
         </div>
         <p className="lead reveal d2">
           New builds, careful refurbishments and multi-unit developments across the South East —
@@ -21,17 +21,20 @@ function Projects() {
           <article className={`proj ${p.cls} reveal ${i ? "d" + i : ""}`} key={p.t}>
             <span className="tag">{p.tag}</span>
             <div className="proj-img">
-              {p.img
-                ? <img src={p.img} alt={p.label} loading="lazy" />
-                : <Ph label={p.label} />}
+              {p.img ? (
+                p.cardFull ? (
+                  <>
+                    <div className="proj-img-blur" style={{backgroundImage:`url(${p.img})`}} />
+                    <img src={p.img} alt={p.label} loading="lazy" style={{objectFit:"contain",position:"relative",zIndex:1}} />
+                  </>
+                ) : <img src={p.img} alt={p.label} loading="lazy" />
+              ) : <Ph label={p.label} />}
             </div>
             {p.budget && (
               <div className="proj-specs">
                 <span>{p.budget}</span>
                 <span className="sep">·</span>
                 <span>{p.duration}</span>
-                <span className="sep">·</span>
-                <span>{p.year}</span>
               </div>
             )}
             <a className="meta" data-pagelink href={p.slug ? p.slug + ".html" : "#"}>
@@ -137,8 +140,7 @@ function Contact() {
             relaxed, no-obligation consultation.
           </p>
           <div className="contact-details reveal d2">
-            <div className="cdetail"><span className="k">Call</span><span className="v">020 8000 0000</span></div>
-            <div className="cdetail"><span className="k">Email</span><span className="v">hello@chanadesign.co.uk</span></div>
+            <div className="cdetail"><span className="k">Email</span><span className="v">info@chanadesignandbuild.co.uk</span></div>
           </div>
         </div>
 
@@ -210,8 +212,7 @@ function Footer() {
           </div>
           <div className="fcol">
             <h4>Get in touch</h4>
-            <a data-pagelink href="Contact.html">020 8000 0000</a>
-            <a data-pagelink href="Contact.html">hello@chanadesign.co.uk</a>
+            <a href="mailto:info@chanadesignandbuild.co.uk">info@chanadesignandbuild.co.uk</a>
             <a data-pagelink href="Contact.html">Request a quote</a>
           </div>
         </div>
@@ -252,9 +253,7 @@ function ProjectBreakdown() {
             </div>
             <div className="pb-info">
               <div className="pb-stats">
-                <div className="pb-stat"><span className="k">Budget</span><span className="v">{p.budget}</span></div>
                 <div className="pb-stat"><span className="k">Duration</span><span className="v">{p.duration}</span></div>
-                <div className="pb-stat"><span className="k">Completed</span><span className="v">{p.year}</span></div>
                 <div className="pb-stat"><span className="k">Type</span><span className="v">{p.tag}</span></div>
               </div>
               <p className="pb-brief">{p.brief}</p>
@@ -282,8 +281,15 @@ function ProjectDetail() {
     <React.Fragment>
       {/* ── Hero ── */}
       <section className="proj-detail-hero">
-        <img src={p.img} alt={p.t} />
-        <div className="proj-detail-hero-overlay">
+        {p.img ? (
+          <>
+            <div className="proj-hero-blur" style={{backgroundImage:`url(${p.img})`}} />
+            <img src={p.img} alt={p.t} style={{objectFit: p.imgContain ? "contain" : "cover", objectPosition: p.imgPos || "center 20%", position:"relative", zIndex:1}} />
+          </>
+        ) : (
+          <Ph label="Photography coming soon" dark style={{position:"absolute", inset:0, zIndex:1}} />
+        )}
+        <div className="proj-detail-hero-overlay" style={{zIndex:2}}>
           <div className="wrap">
             <a className="back-link" data-pagelink href="Projects.html"><span>←</span> All projects</a>
             <span className="tag" style={{marginLeft:"auto"}}>{p.tag}</span>
@@ -301,7 +307,7 @@ function ProjectDetail() {
             <a className="btn reveal d3" style={{display:"inline-flex", marginTop:"36px"}} data-pagelink href="Contact.html">Start a similar project <Arrow /></a>
           </div>
           <div className="proj-detail-stats reveal d1">
-            {[{k:"Budget",v:p.budget},{k:"Duration",v:p.duration},{k:"Completed",v:p.year},{k:"Type",v:p.tag}].map(st => (
+            {[{k:"Duration",v:p.duration},{k:"Type",v:p.tag}].map(st => (
               <div className="pb-stat" key={st.k}>
                 <span className="k">{st.k}</span>
                 <span className="v">{st.v}</span>
@@ -349,27 +355,69 @@ function ProjectDetail() {
         </section>
       )}
 
-      {/* ── Image gallery ── */}
+      {/* ── After gallery ── */}
       {gallery.length > 1 && (
         <section className="section" id="proj-gallery">
           <div className="wrap">
-            <div className="eyebrow reveal" style={{marginBottom:"clamp(28px,4vw,48px)"}}>Photography</div>
+            <div className="eyebrow reveal" style={{marginBottom:"8px"}}>After</div>
+            <h3 className="reveal d1" style={{fontFamily:"var(--serif)",fontSize:"clamp(24px,3vw,40px)",lineHeight:1.1,letterSpacing:"-0.02em",marginBottom:"clamp(28px,4vw,48px)"}}>The finished home.</h3>
             <div className="proj-gallery-grid">
               {gallery.map((src, i) => (
                 <button key={src+i} className={`proj-gallery-item reveal ${i ? "d"+(i%3) : ""} ${i===0?"span2":""}`}
                   onClick={() => setLight(src)} style={{background:"none",border:"none",padding:0,cursor:"zoom-in"}}>
-                  <img src={src} alt={p.t + " — image " + (i+1)} loading="lazy" />
+                  <img src={src} alt={p.t + " — after " + (i+1)} loading="lazy" />
                 </button>
               ))}
             </div>
           </div>
-          {light && (
-            <div className="proj-lightbox" onClick={() => setLight(null)}>
-              <button className="proj-lightbox-close" onClick={() => setLight(null)}>✕</button>
-              <img src={light} alt="Enlarged view" onClick={e => e.stopPropagation()} />
-            </div>
-          )}
         </section>
+      )}
+
+      {/* ── Before gallery ── */}
+      {(p.before && p.before.length > 0) && (
+        <section className="section" id="proj-before">
+          <div className="wrap">
+            <div className="eyebrow reveal" style={{marginBottom:"8px"}}>Before</div>
+            <h3 className="reveal d1" style={{fontFamily:"var(--serif)",fontSize:"clamp(24px,3vw,40px)",lineHeight:1.1,letterSpacing:"-0.02em",marginBottom:"clamp(28px,4vw,48px)"}}>Where we started.</h3>
+            {p.videoBefore && (
+              <div className="reveal d1" style={{borderRadius:"12px",overflow:"hidden",lineHeight:0,display:"flex",justifyContent:"center",background:p.videoPortrait?"transparent":"#111",marginBottom:"12px"}}>
+                <video controls style={{display:"block",width:p.videoPortrait?"auto":"100%",maxWidth:"100%",maxHeight:"75vh"}} playsInline>
+                  <source src={p.video} type="video/mp4" />
+                </video>
+              </div>
+            )}
+            <div className="proj-gallery-grid">
+              {p.before.map((src, i) => (
+                <button key={src+i} className={`proj-gallery-item reveal ${i ? "d"+(i%3) : ""} ${i===0?"span2":""}`}
+                  onClick={() => setLight(src)} style={{background:"none",border:"none",padding:0,cursor:"zoom-in"}}>
+                  <img src={src} alt={p.t + " — before " + (i+1)} loading="lazy" />
+                </button>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* ── Video (drone) — only if not used as before ── */}
+      {p.video && !p.videoBefore && (
+        <section className="section proj-story-bg" id="proj-video">
+          <div className="wrap">
+            <div className="eyebrow reveal" style={{marginBottom:"8px"}}>{p.videoEyebrow || "Drone footage"}</div>
+            <h3 className="reveal d1" style={{fontFamily:"var(--serif)",fontSize:"clamp(24px,3vw,40px)",lineHeight:1.1,letterSpacing:"-0.02em",marginBottom:"clamp(28px,4vw,48px)"}}>{p.videoHeading || "See it from above."}</h3>
+            <div className="reveal d1" style={{borderRadius:"12px",overflow:"hidden",lineHeight:0, display:"flex", justifyContent:"center", background: p.videoPortrait ? "transparent" : "#111"}}>
+              <video controls style={{display:"block", width: p.videoPortrait ? "auto" : "100%", maxWidth:"100%", maxHeight:"75vh"}} playsInline>
+                <source src={p.video} type="video/mp4" />
+              </video>
+            </div>
+          </div>
+        </section>
+      )}
+
+      {light && (
+        <div className="proj-lightbox" onClick={() => setLight(null)}>
+          <button className="proj-lightbox-close" onClick={() => setLight(null)}>✕</button>
+          <img src={light} alt="Enlarged view" onClick={e => e.stopPropagation()} />
+        </div>
       )}
 
       {/* ── More projects ── */}

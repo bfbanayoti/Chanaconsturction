@@ -417,8 +417,8 @@ function Hero() {
       <HeroWire />
       <div className="hero-top">
         <p className="enter e4">
-          We deliver complete, end-to-end property and construction &mdash; empowering homeowners
-          and developers with cutting-edge expertise and unwavering attention to detail at every stage.
+          We provide comprehensive, end-to-end property and construction solutions, empowering our
+          clients with advanced expertise and consistent attention to detail at every stage.
         </p>
         <div className="right enter e5">
           <div className="big">A London firm built on decades of hands-on experience.</div>
