@@ -639,7 +639,7 @@ body:not(.loaded) .curtain {
 /* ============================================================
    PROJECTS gallery
    ============================================================ */
-.proj-grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: clamp(14px, 1.6vw, 22px); }
+.proj-grid { display: grid; grid-template-columns: repeat(12, 1fr); grid-auto-rows: 258px; gap: clamp(14px, 1.6vw, 22px); }
 .proj { position: relative; overflow: hidden; border-radius: 5px; border: 1px solid var(--line); cursor: pointer; }
 .proj-img { position: absolute; inset: 0; overflow: hidden; }
 .proj-img img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 1s var(--ease); }
@@ -677,13 +677,13 @@ body:not(.loaded) .curtain {
   font-family: var(--mono); font-size: 10.5px; letter-spacing: .12em; text-transform: uppercase;
   color: var(--ink); background: oklch(0.976 0.006 85 / 0.9); padding: 6px 10px; border-radius: 99px;
 }
-.proj.tall { grid-column: span 6; grid-row: span 2; min-height: 520px; }
-.proj.wide { grid-column: span 6; min-height: 0; }
-.proj.sqr  { grid-column: span 6; min-height: 0; }
-.proj.full { grid-column: span 12; aspect-ratio: 21/8; }
+.proj.tall { grid-column: span 6; grid-row: span 2; }
+.proj.wide { grid-column: span 6; }
+.proj.sqr  { grid-column: span 6; }
+.proj.full { grid-column: span 12; grid-row: span 2; }
 @media (max-width: 760px) {
-  .proj.tall, .proj.wide { grid-column: span 12; aspect-ratio: 4/3; }
-  .proj.full { grid-column: span 12; aspect-ratio: 4/3; }
+  .proj-grid { grid-auto-rows: auto; }
+  .proj.tall, .proj.wide, .proj.sqr, .proj.full { grid-column: span 12; grid-row: span 1; aspect-ratio: 4/3; }
 }
 
 /* ============================================================
