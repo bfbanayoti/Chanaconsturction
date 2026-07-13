@@ -374,11 +374,11 @@ function About() {
         <div className="statement-side reveal d2">
           <p>
             Chana Design and Build was founded on a simple principle: delivering exceptional
-            workmanship, honest value, and a level of client care too often missing from the industry.
+            workmanship, honest value, and a level of client care that is often missing from the industry.
           </p>
           <p>
             Whether you are building your forever home, undertaking a major refurbishment, or investing
-            in a development, we understand this is one of the most significant — and stressful —
+            in a development, we understand this is one of the most significant and stressful
             commitments you will ever make. So we make the whole process smooth, transparent and genuinely enjoyable.
           </p>
           <div className="sig">
