@@ -388,10 +388,6 @@ function HeroAnimation() {
         ctx.beginPath(); ctx.moveTo(ex, dl - 4); ctx.lineTo(ex, dl + 4);
         ctx.strokeStyle = 'rgba(176,91,54,0.3)'; ctx.stroke();
       });
-      ctx.fillStyle = 'rgba(176,91,54,0.4)';
-      ctx.font = `${Math.max(9, W * 0.028)}px "Spline Sans Mono", monospace`;
-      ctx.textAlign = 'center';
-      ctx.fillText('ELEVATION · FRONT', W / 2, dl + Math.max(12, W * 0.042));
     };
 
     const onMove = e => {
