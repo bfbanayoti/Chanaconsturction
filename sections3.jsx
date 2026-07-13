@@ -204,13 +204,6 @@ function Footer() {
             {NAV_LINKS.map(l => <a key={l.label} data-pagelink href={l.href}>{l.label}</a>)}
           </div>
           <div className="fcol">
-            <h4>Services</h4>
-            <a data-pagelink href="Services.html">New builds</a>
-            <a data-pagelink href="Services.html">Extensions</a>
-            <a data-pagelink href="Services.html">Refurbishments</a>
-            <a data-pagelink href="Services.html">Developments</a>
-          </div>
-          <div className="fcol">
             <h4>Get in touch</h4>
             <a href="mailto:info@chanadesignandbuild.co.uk">info@chanadesignandbuild.co.uk</a>
             <a data-pagelink href="Contact.html">Request a quote</a>
