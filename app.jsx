@@ -22,7 +22,7 @@ const PAGE_META = {
   about:    { eyebrow: "About us", lines: ["A family business,", "a higher standard"], intro: "Founded on a simple principle — exceptional workmanship, honest value, and a level of client care too often missing from the industry." },
   services: { eyebrow: "What we do", lines: ["One team,", "the whole journey"], intro: "An integrated turnkey solution guiding you from land acquisition and bespoke design through construction, handover and dedicated lifetime aftercare." },
   projects: { eyebrow: "Selected work", lines: ["Homes we're", "proud of"], intro: "Bespoke new builds, careful refurbishments and multi-unit developments across London — each treated as if it were our own." },
-  contact:  { eyebrow: "Get in touch", lines: ["Let's build", "something lasting"], intro: "Tell us about your plans and we'll arrange a relaxed, no-obligation consultation within one working day." },
+  contact:  { eyebrow: "Get in touch", lines: ["Let's bring your", "vision to life"], intro: "Tell us about your plans and we'll arrange a relaxed, no-obligation consultation within one working day." },
 };
 
 function PageContent() {

@@ -134,7 +134,7 @@ function Contact() {
       <div className="contact-grid">
         <div className="contact-left">
           <div className="eyebrow reveal">Start your project</div>
-          <h2 className="reveal d1" style={{ marginTop: "22px" }}>Let's build<br />something lasting</h2>
+          <h2 className="reveal d1" style={{ marginTop: "22px" }}>Let's bring your<br />vision to life</h2>
           <p className="lead reveal d2">
             Tell us a little about your plans. We'll come back within one working day to arrange a
             relaxed, no-obligation consultation.
