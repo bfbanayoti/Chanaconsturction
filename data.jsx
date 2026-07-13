@@ -59,7 +59,7 @@ const STATS = [
 ];
 
 const PROJECTS = [
-  { t: "Chigwell — Brook Way", s: "New Build · 6 bed · Chigwell · Essex", tag: "New Build", cls: "tall", label: "CHIGWELL — BROOK WAY",
+  { t: "Chigwell — Six Bedroom Home", s: "New Build · 6 bed · Chigwell · Essex", tag: "New Build", cls: "tall", label: "CHIGWELL — SIX BEDROOM HOME",
     slug: "Chigwell-Brook-Way",
     img: "assets/Chigwell - Brook Way - Hero.png",
     video: "assets/Brookway Drone Video (1).mp4",
@@ -101,7 +101,7 @@ const PROJECTS = [
       "assets/Chigwell - Brook Way - Before 6.jpg",
     ]
   },
-  { t: "Chigwell — Chester Road", s: "New Build · 5 bed · Chigwell · Essex", tag: "New Build", cls: "wide", label: "CHIGWELL — CHESTER ROAD",
+  { t: "Chigwell — Five Bedroom Home", s: "New Build · 5 bed · Chigwell · Essex", tag: "New Build", cls: "wide", label: "CHIGWELL — FIVE BEDROOM HOME",
     slug: "Chigwell-House",
     img: "assets/Chigwell - Chester Road - Hero.png",
     imgContain: true, cardFull: true,
@@ -129,7 +129,7 @@ const PROJECTS = [
       "assets/Chigwell - Chester Road - Before 6.jpg",
     ]
   },
-  { t: "Emerson Park — Nelmes Road", s: "New Build · 8 bed · Emerson Park · London", tag: "New Build", cls: "sqr", label: "EMERSON PARK — NELMES ROAD",
+  { t: "Emerson Park — Eight Bedroom Home", s: "New Build · 8 bed · Emerson Park · London", tag: "New Build", cls: "sqr", label: "EMERSON PARK — EIGHT BEDROOM HOME",
     slug: "Emerson-Park-Nelmes-Road",
     img: "assets/Emerson Park - Nelmes Road - Hero.png",
     imgContain: true,
@@ -168,7 +168,7 @@ const PROJECTS = [
       "assets/Emerson Park - Nelmes Road - After 18.jpg",
     ]
   },
-  { t: "Emerson Park — Sylvan Avenue", s: "Refurbishment · Emerson Park · London", tag: "Refurbishment", cls: "wide", label: "EMERSON PARK — SYLVAN AVENUE",
+  { t: "Emerson Park — Six Bedroom Home", s: "Refurbishment · Emerson Park · London", tag: "Refurbishment", cls: "wide", label: "EMERSON PARK — SIX BEDROOM HOME",
     slug: "Emerson-Park-Sylvan-Avenue",
     img: "assets/EP/Sylvan - Hero.jpg",
     duration: "8–9 months", year: "2026",
