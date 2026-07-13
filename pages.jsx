@@ -27,7 +27,7 @@ function CtaBand() {
           <div className="cta-inner">
             <div className="reveal">
               <div className="eyebrow" style={{ marginBottom: "20px" }}>Start your project</div>
-              <h2>Let's build<br />something lasting.</h2>
+              <h2>Let's build<br />something lasting</h2>
             </div>
             <div className="reveal d1 cta-aside">
               <p>Tell us about your plans. We'll arrange a relaxed, no-obligation consultation within one working day.</p>

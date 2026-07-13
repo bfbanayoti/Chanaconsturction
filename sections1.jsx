@@ -426,7 +426,7 @@ function Hero() {
         <div className="eyebrow enter e1">Built on trust, quality &amp; client care</div>
         <h1 className="hero-title">
           <span className="line"><span className="line-i li1">Building</span></span>
-          <span className="line"><span className="line-i li2"><span className="shiny">around you.</span></span></span>
+          <span className="line"><span className="line-i li2"><span className="shiny">around you</span></span></span>
         </h1>
 
         <div className="hero-cta-row enter e6">

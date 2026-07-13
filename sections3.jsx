@@ -58,7 +58,7 @@ function Process() {
         <div className="sec-head">
           <div>
             <div className="eyebrow reveal">How we work</div>
-            <h2 className="reveal d1">Five stages,<br />zero surprises.</h2>
+            <h2 className="reveal d1">Five stages,<br />zero surprises</h2>
           </div>
           <p className="lead reveal d2">
             From the initial consultation through to completion and beyond, we provide clear
@@ -85,7 +85,7 @@ function Testimonials() {
       <div className="wrap"><div className="sec-head">
         <div>
           <div className="eyebrow reveal">Client care</div>
-          <h2 className="reveal d1">Relationships<br />that last.</h2>
+          <h2 className="reveal d1">Relationships<br />that last</h2>
         </div>
         <p className="lead reveal d2">
           We build lasting relationships founded on trust, integrity and a shared commitment to excellence.
@@ -134,7 +134,7 @@ function Contact() {
       <div className="contact-grid">
         <div className="contact-left">
           <div className="eyebrow reveal">Start your project</div>
-          <h2 className="reveal d1" style={{ marginTop: "22px" }}>Let's build<br />something lasting.</h2>
+          <h2 className="reveal d1" style={{ marginTop: "22px" }}>Let's build<br />something lasting</h2>
           <p className="lead reveal d2">
             Tell us a little about your plans. We'll come back within one working day to arrange a
             relaxed, no-obligation consultation.
@@ -234,7 +234,7 @@ function ProjectBreakdown() {
         <div className="sec-head">
           <div>
             <div className="eyebrow reveal">Project detail</div>
-            <h2 className="reveal d1">Behind every build.</h2>
+            <h2 className="reveal d1">Behind every build</h2>
           </div>
           <p className="lead reveal d2">Select a project to see the brief, scope and outcome.</p>
         </div>
@@ -360,7 +360,7 @@ function ProjectDetail() {
         <section className="section" id="proj-gallery">
           <div className="wrap">
             <div className="eyebrow reveal" style={{marginBottom:"8px"}}>After</div>
-            <h3 className="reveal d1" style={{fontFamily:"var(--serif)",fontSize:"clamp(24px,3vw,40px)",lineHeight:1.1,letterSpacing:"-0.02em",marginBottom:"clamp(28px,4vw,48px)"}}>The finished home.</h3>
+            <h3 className="reveal d1" style={{fontFamily:"var(--serif)",fontSize:"clamp(24px,3vw,40px)",lineHeight:1.1,letterSpacing:"-0.02em",marginBottom:"clamp(28px,4vw,48px)"}}>The finished home</h3>
             <div className="proj-gallery-grid">
               {gallery.map((src, i) => (
                 <button key={src+i} className={`proj-gallery-item reveal ${i ? "d"+(i%3) : ""} ${i===0?"span2":""}`}
@@ -378,7 +378,7 @@ function ProjectDetail() {
         <section className="section" id="proj-before">
           <div className="wrap">
             <div className="eyebrow reveal" style={{marginBottom:"8px"}}>Before</div>
-            <h3 className="reveal d1" style={{fontFamily:"var(--serif)",fontSize:"clamp(24px,3vw,40px)",lineHeight:1.1,letterSpacing:"-0.02em",marginBottom:"clamp(28px,4vw,48px)"}}>Where we started.</h3>
+            <h3 className="reveal d1" style={{fontFamily:"var(--serif)",fontSize:"clamp(24px,3vw,40px)",lineHeight:1.1,letterSpacing:"-0.02em",marginBottom:"clamp(28px,4vw,48px)"}}>Where we started</h3>
             {p.videoBefore && (
               <div className="reveal d1" style={{borderRadius:"12px",overflow:"hidden",lineHeight:0,display:"flex",justifyContent:"center",background:p.videoPortrait?"transparent":"#111",marginBottom:"12px"}}>
                 <video controls style={{display:"block",width:p.videoPortrait?"auto":"100%",maxWidth:"100%",maxHeight:"75vh"}} playsInline>
@@ -403,7 +403,7 @@ function ProjectDetail() {
         <section className="section proj-story-bg" id="proj-video">
           <div className="wrap">
             <div className="eyebrow reveal" style={{marginBottom:"8px"}}>{p.videoEyebrow || "Drone footage"}</div>
-            <h3 className="reveal d1" style={{fontFamily:"var(--serif)",fontSize:"clamp(24px,3vw,40px)",lineHeight:1.1,letterSpacing:"-0.02em",marginBottom:"clamp(28px,4vw,48px)"}}>{p.videoHeading || "See it from above."}</h3>
+            <h3 className="reveal d1" style={{fontFamily:"var(--serif)",fontSize:"clamp(24px,3vw,40px)",lineHeight:1.1,letterSpacing:"-0.02em",marginBottom:"clamp(28px,4vw,48px)"}}>{p.videoHeading || "See it from above"}</h3>
             <div className="reveal d1" style={{borderRadius:"12px",overflow:"hidden",lineHeight:0, display:"flex", justifyContent:"center", background: p.videoPortrait ? "transparent" : "#111"}}>
               <video controls style={{display:"block", width: p.videoPortrait ? "auto" : "100%", maxWidth:"100%", maxHeight:"75vh"}} playsInline>
                 <source src={p.video} type="video/mp4" />

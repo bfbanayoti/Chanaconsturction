@@ -176,7 +176,7 @@ const PROJECTS = [
     approach: "We helped our client source the original house and then designed the scheme and obtained planning approval using our in-house architects and structural engineers — carrying the project from acquisition through design and planning to construction under one roof.",
     scope: ["Full refurbishment back to brick", "Single-storey extension", "Balcony formation", "Outdoor swimming pool", "Outbuilding construction", "Architectural & structural design"],
     video: "assets/EP/Sylvan - Walkthrough.mp4", videoPortrait: true,
-    videoEyebrow: "Walkthrough", videoHeading: "Inside the build.",
+    videoEyebrow: "Walkthrough", videoHeading: "Inside the build",
     gallery: [
       "assets/EP/Sylvan - Hero.jpg",
       "assets/EP/Sylvan - After 1.jpg",

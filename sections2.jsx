@@ -369,7 +369,7 @@ function About() {
       <div className="eyebrow reveal" style={{ marginBottom: "34px" }}>Our philosophy</div>
       <div className="statement-grid">
         <h2 className="big-quote reveal d1">
-          We design and deliver solutions with our clients at the <em>core</em>.
+          We design and deliver solutions with our clients at the <em>core</em>
         </h2>
         <div className="statement-side reveal d2">
           <p>
@@ -399,7 +399,7 @@ function ServiceCards() {
         <div className="sec-head">
           <div>
             <div className="eyebrow reveal">What we offer</div>
-            <h2 className="reveal d1">Every stage.<br />One team.</h2>
+            <h2 className="reveal d1">Every stage<br />One team</h2>
           </div>
           <p className="lead reveal d2">
             From securing the right plot to handing over the keys — and everything after —
@@ -434,7 +434,7 @@ function Services() {
         <div className="sec-head">
           <div>
             <div className="eyebrow reveal">Capabilities</div>
-            <h2 className="reveal d1">From land to lifelong aftercare.</h2>
+            <h2 className="reveal d1">From land to lifelong aftercare</h2>
           </div>
           <p className="lead reveal d2">
             An integrated turnkey solution guiding you from land acquisition and bespoke design
@@ -488,7 +488,7 @@ function WhyChana() {
         <div className="sec-head">
           <div>
             <div className="eyebrow reveal">Why Chana</div>
-            <h2 className="reveal d1">The difference<br />is in the detail.</h2>
+            <h2 className="reveal d1">The difference<br />is in the detail</h2>
           </div>
           <p className="lead reveal d2">
             We are not the biggest firm in London. We are deliberate about that — it means every
@@ -515,7 +515,7 @@ function Stats({ eyebrow, heading, sub }) {
       <div className="wrap"><div className="sec-head">
         <div>
           <div className="eyebrow reveal">{eyebrow || "Our track record"}</div>
-          <h2 className="reveal d1">{heading || "Measured by trust."}</h2>
+          <h2 className="reveal d1">{heading || "Measured by trust"}</h2>
         </div>
         <p className="lead reveal d2">
           {sub || "Our success is measured not only by the quality of the homes we create, but by the confidence of the clients we serve."}
@@ -546,7 +546,7 @@ function FounderStory() {
         </div>
         <div className="founder-copy">
           <div className="eyebrow reveal" style={{ marginBottom:"28px" }}>Our story</div>
-          <h2 className="reveal d1">Built on a family<br />tradition of craft.</h2>
+          <h2 className="reveal d1">Built on a family<br />tradition of craft</h2>
           <p className="reveal d2">
             The Chana family has been surrounded by construction and craftsmanship for generations.
             What began as frustration — watching friends and family constantly let down by rogue
@@ -574,7 +574,7 @@ function Values() {
         <div className="sec-head">
           <div>
             <div className="eyebrow reveal">What drives us</div>
-            <h2 className="reveal d1">Six principles.<br />No exceptions.</h2>
+            <h2 className="reveal d1">Six principles<br />No exceptions</h2>
           </div>
           <p className="lead reveal d2">
             These are not aspirations — they are the standards we hold ourselves to on every project,
@@ -602,7 +602,7 @@ function TradesList() {
         <div className="sec-head">
           <div>
             <div className="eyebrow reveal">Full scope</div>
-            <h2 className="reveal d1">Everything under<br />one roof.</h2>
+            <h2 className="reveal d1">Everything under<br />one roof</h2>
           </div>
           <p className="lead reveal d2">
             We manage every trade in-house or through our vetted network — so you have one point
@@ -641,7 +641,7 @@ function AccredsBand() {
         <div className="sec-head">
           <div>
             <div className="eyebrow reveal">Credentials</div>
-            <h2 className="reveal d1">Built on trust,<br />backed by proof.</h2>
+            <h2 className="reveal d1">Built on trust,<br />backed by proof</h2>
           </div>
           <p className="lead reveal d2">
             Every accreditation we hold is a promise to you — independently verified standards
@@ -726,7 +726,7 @@ function WhereWeBuild() {
         <div className="sec-head">
           <div>
             <div className="eyebrow reveal">Where we build</div>
-            <h2 className="reveal d1">Across London<br />&amp; Essex.</h2>
+            <h2 className="reveal d1">Across London<br />&amp; Essex</h2>
           </div>
           <p className="lead reveal d2">
             We work across London and Essex — from new-build developments and
