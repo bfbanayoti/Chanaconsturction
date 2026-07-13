@@ -60,7 +60,7 @@ const STATS = [
 
 const PROJECTS = [
   { t: "Chigwell — Six Bedroom Home", s: "New Build · 6 bed · Chigwell · Essex", tag: "New Build", cls: "tall", label: "CHIGWELL — SIX BEDROOM HOME",
-    slug: "Chigwell-Brook-Way",
+    slug: "Chigwell-Six-Bedroom-Home",
     img: "assets/Chigwell - Brook Way - Hero.png",
     video: "assets/Brookway Drone Video (1).mp4",
     duration: "12 months", year: "2024",
@@ -102,7 +102,7 @@ const PROJECTS = [
     ]
   },
   { t: "Chigwell — Five Bedroom Home", s: "New Build · 5 bed · Chigwell · Essex", tag: "New Build", cls: "wide", label: "CHIGWELL — FIVE BEDROOM HOME",
-    slug: "Chigwell-House",
+    slug: "Chigwell-Five-Bedroom-Home",
     img: "assets/Chigwell - Chester Road - Hero.png",
     imgContain: true, cardFull: true,
     duration: "12 months", year: "2024",
@@ -130,7 +130,7 @@ const PROJECTS = [
     ]
   },
   { t: "Emerson Park — Eight Bedroom Home", s: "New Build · 8 bed · Emerson Park · London", tag: "New Build", cls: "sqr", label: "EMERSON PARK — EIGHT BEDROOM HOME",
-    slug: "Emerson-Park-Nelmes-Road",
+    slug: "Emerson-Park-Eight-Bedroom-Home",
     img: "assets/Emerson Park - Nelmes Road - Hero.png",
     imgContain: true,
     video: "assets/Nelmes Road.mp4", videoPortrait: true,
@@ -169,7 +169,7 @@ const PROJECTS = [
     ]
   },
   { t: "Emerson Park — Six Bedroom Home", s: "Refurbishment · Emerson Park · London", tag: "Refurbishment", cls: "wide", label: "EMERSON PARK — SIX BEDROOM HOME",
-    slug: "Emerson-Park-Sylvan-Avenue",
+    slug: "Emerson-Park-Six-Bedroom-Home",
     img: "assets/EP/Sylvan - Hero.jpg",
     duration: "8–9 months", year: "2026",
     brief: "A full refurbishment back to brick of a substantial family home on Sylvan Avenue, Emerson Park — including a single-storey extension, balcony formation, and the construction of an outdoor swimming pool and outbuilding. Six bedrooms, eight bathrooms across 600 sq m. A turnkey project.",
