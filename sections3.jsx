@@ -403,7 +403,7 @@ function ProjectDetail() {
         <section className="section proj-story-bg" id="proj-video">
           <div className="wrap">
             <div className="eyebrow reveal" style={{marginBottom:"8px"}}>{p.videoEyebrow || "Drone footage"}</div>
-            <h3 className="reveal d1" style={{fontFamily:"var(--serif)",fontSize:"clamp(24px,3vw,40px)",lineHeight:1.1,letterSpacing:"-0.02em",marginBottom:"clamp(28px,4vw,48px)"}}>{p.videoHeading || "See it from above"}</h3>
+            <h3 className="reveal d1" style={{fontFamily:"var(--serif)",fontSize:"clamp(24px,3vw,40px)",lineHeight:1.1,letterSpacing:"-0.02em",marginBottom:"clamp(28px,4vw,48px)"}}>{p.videoHeading || "See it in motion"}</h3>
             <div className="reveal d1" style={{borderRadius:"12px",overflow:"hidden",lineHeight:0, display:"flex", justifyContent:"center", background: p.videoPortrait ? "transparent" : "#111"}}>
               <video controls style={{display:"block", width: p.videoPortrait ? "auto" : "100%", maxWidth:"100%", maxHeight:"75vh"}} playsInline>
                 <source src={p.video} type="video/mp4" />
